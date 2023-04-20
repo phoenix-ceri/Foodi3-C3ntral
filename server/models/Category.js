@@ -13,3 +13,6 @@ const categorySchema = new Schema({
 const Category = mongoose.model('Category', categorySchema);
 
 module.exports = Category;
+
+
+//could be specifications, dietary restrictions, lifestyles, etc.

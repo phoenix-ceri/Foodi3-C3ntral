@@ -1,12 +1,13 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
-  type Category {
+
+  type Category (Specifications, ie vegan, keto, etc.) {
     _id: ID
     name: String
   }
 
-  type Product {
+  type Product (Recipe?) {
     _id: ID
     name: String
     description: String
@@ -16,7 +17,7 @@ const typeDefs = gql`
     category: Category
   }
 
-  type Order {
+  type Order (MealPlan?) {
     _id: ID
     purchaseDate: String
     products: [Product]
@@ -27,7 +28,8 @@ const typeDefs = gql`
     firstName: String
     lastName: String
     email: String
-    orders: [Order]
+    mealPlans: [mealPlan]
+    recipes: [recipes]
   }
 
   type Checkout {
@@ -54,6 +56,15 @@ const typeDefs = gql`
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     updateProduct(_id: ID!, quantity: Int!): Product
     login(email: String!, password: String!): Auth
+  }
+
+  //modified one for foodiecentral
+  type Mutation {
+    addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
+    addPlan(plans: [ID]!): Checkout
+
+
+
   }
 `;
 

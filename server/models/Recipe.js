@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
-
+const ratingSchema = require('./Rating')
 const { Schema } = mongoose;
 
-const productSchema = new Schema({
+//was product model, started modifying to be recipe model, not fully completed yet. Thinking category will be 'plan' or 'mealplan'
+
+const recipeSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -28,9 +30,12 @@ const productSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'Category',
     required: true
-  }
+  },
+  ratings: [ratingSchema]
 });
 
-const Product = mongoose.model('Product', productSchema);
+const Recipe = mongoose.model('Recipe', recipeSchema);
 
-module.exports = Product;
+module.exports = Recipe;
+
+
