@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+//this would work for a meal plan one? your "order" is the meal plan with the "products" being the recipes.
+
 const { Schema } = mongoose;
 
 const orderSchema = new Schema({
