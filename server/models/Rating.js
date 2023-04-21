@@ -1,6 +1,6 @@
 const { Schema, Types } = require('mongoose');
 
-// Schema to create a reaction subdocument
+// Schema to create a rating subdocument
 const ratingSchema = new Schema(
   {
     ratingId: {
