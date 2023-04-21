@@ -4,30 +4,30 @@ import { Container, Row, Col, Image } from 'react-bootstrap';
 function AboutTeamPage() {
   const teamMembers = [
     {
-      name: 'John Doe',
-      title: 'CEO',
-      image: 'https://via.placeholder.com/150',
+      name: 'Eva Perez',
+      title: 'Co-Lead & Backend',
+      image: 'https://media.discordapp.net/attachments/1068322599186202717/1098765556506689586/eva-transformed.png?width=497&height=671',
       bio:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac metus eget velit suscipit commodo a sed nulla.',
     },
     {
-      name: 'Jane Doe',
-      title: 'CTO',
-      image: 'https://via.placeholder.com/150',
+      name: 'Jeff Zulma',
+      title: 'Front End Engineer',
+      image: 'https://media.discordapp.net/attachments/1068322599186202717/1098765554233376889/jeff-NeuOCDVAs-transformed.png?width=534&height=671',
       bio:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac metus eget velit suscipit commodo a sed nulla.',
     },
     {
-      name: 'Bob Smith',
-      title: 'Lead Developer',
-      image: 'https://via.placeholder.com/150',
+      name: 'Kelley Flinn',
+      title: 'Co-Lead & Backend',
+      image: 'https://media.discordapp.net/attachments/1068322599186202717/1098765554908676116/kelley-transformed.png?width=360&height=669',
       bio:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac metus eget velit suscipit commodo a sed nulla.',
     },
     {
-      name: 'Sara Lee',
-      title: 'Marketing Manager',
-      image: 'https://via.placeholder.com/150',
+      name: 'Phoenix-Ceri Powell',
+      title: 'Front End Engineer',
+      image: 'https://media.discordapp.net/attachments/1068322599186202717/1098765553629413406/fifi-transformed.png?width=377&height=671',
       bio:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac metus eget velit suscipit commodo a sed nulla.',
     },
