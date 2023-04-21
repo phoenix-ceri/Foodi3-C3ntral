@@ -74,6 +74,7 @@ nav {
         &:first-child {
             &::after {
                 content: 'HOME';
+                color: black;
             }
         }
     }
@@ -81,30 +82,34 @@ nav {
     a.about-link {
         &:after {
             content: 'ABOUT';
+            color:black;
         }
     }
 
     a.profile-link {
         &:after {
             content: 'PROFILE';
+            color: black;
         }
     }
 
     a.recipes-link {
         &:after {
             content: 'RECIPES';
+            color: black;
         }
     }
 
     a.myPlans-Cart-link {
         &:after {
             content: 'MY PLAN';
+            color: black;
         }
     }
 
     a.active {
         svg {
-            color: #bff896;
+            color: black;
             font-family: 'Roboto Slab', serif;
         }
     }

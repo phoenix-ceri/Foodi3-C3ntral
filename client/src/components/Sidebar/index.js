@@ -1,16 +1,14 @@
 import { Link, NavLink } from 'react-router-dom';
 import './index.scss';
-import Avatar from '../../assets/images/EvaAvatarPic.svg';
-import GreenSubtitle from '../../assets/images/GreenSubtitle.svg';
+import Logo from '../../assets/images/svg/Logo-with-black-double-border.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook, faUser, faHome } from '@fortawesome/free-solid-svg-icons';
+import { faBook, faUser, faHome, faHeartCircleCheck, faPeopleRoof } from '@fortawesome/free-solid-svg-icons';
 import '../../assets/fonts';
 
 const Sidebar = () => (
     <div className='nav-bar'>
         <Link className='logo' to='/'>
-            <img src={Avatar} alt='Eva Avatar' />
-            <img className='sub-logo' src={GreenSubtitle} alt='Green Eva Perez' />
+            <img src={Logo} alt='Logo with black frame' />
         </Link>
         <nav>
             <NavLink exact='true' activeclassname='active' to='/'>
