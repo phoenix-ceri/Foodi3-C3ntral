@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
-const Order = require('./Order');
+const MealPlan = require('./MealPlan');
 
 const userSchema = new Schema({
   firstName: {
@@ -25,6 +25,7 @@ const userSchema = new Schema({
     required: true,
     minlength: 5
   },
+  mealPlans: [MealPlan.schema],
   friends: [
     {
       type: Schema.Types.ObjectId,
