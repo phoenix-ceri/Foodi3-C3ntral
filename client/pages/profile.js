@@ -3,9 +3,7 @@ jeff
 import React from "react";
 import AboutUs from "../components/aboutus";
 import MealPlanList from "../components/mealPlanList";
-import Calendar from "../components/calendar";
 import RecipeList from "../components/recipelist";
-import Calendar from "../components/calendar";
 
 
 
@@ -16,7 +14,6 @@ const Profile = () => {
         <AboutUs />
         <MyCalander />
         <MealPlanList />
-        <Calendar />
         <RecipeList/>
       </div>
     </main>

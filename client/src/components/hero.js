@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const HeroImage = ({ imageUrl, altText }) => {
   return (
     <section className="hero-image">
