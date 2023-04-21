@@ -1,11 +1,15 @@
+@import '../../assets/fonts/fonts.css';
+
 .nav-bar {
-    background: #1E1E1F;
-    width: 60px;
+    background-image: url('../../assets/images/png/Food-picture.png');
+    background-repeat: repeat-y;
+    width: 200px;
     height:100%;
     position: absolute;
     top: 0;
     z-index: 3;
     min-height: 500px;
+    font-family: 'Raleway', sans-serif;
 
     .logo {
         display: block;
@@ -31,7 +35,7 @@ nav {
 
     a {
         font-size: 22px;
-        color:#4d4d4e;
+        color:#ffffff;
         display: block;
         line-height: 51px;
         height: 51px;
@@ -43,7 +47,7 @@ nav {
         }
 
         &:hover {
-            color:#EABFB4;
+            color:#95B380;
 
             svg {
                 opacity: 0;
@@ -70,7 +74,6 @@ nav {
         &:first-child {
             &::after {
                 content: 'HOME';
-                font-family: monospace;
             }
         }
     }
@@ -78,44 +81,31 @@ nav {
     a.about-link {
         &:after {
             content: 'ABOUT';
-            font-family: monospace;
         }
     }
 
-    a.contact-link {
+    a.profile-link {
         &:after {
-            content: 'CONTACT';
-            font-family: monospace;
+            content: 'PROFILE';
+        }
+    }
+
+    a.recipes-link {
+        &:after {
+            content: 'RECIPES';
+        }
+    }
+
+    a.myPlans-Cart-link {
+        &:after {
+            content: 'MY PLAN';
         }
     }
 
     a.active {
         svg {
-            color: #EABFB4
-        }
-    }
-}
-
-ul {
-    position: absolute;
-    bottom: 20px;
-    width:100%;
-    display: block;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-    margin: 0;
-
-    li {
-        a {
-            padding:7px 0;
-            display: block;
-            font-size: 15px;
-            line-height: 16px;
-
-            &:hover svg{
-                color: #EABFB4;
-            }
+            color: #bff896;
+            font-family: 'Roboto Slab', serif;
         }
     }
 }
