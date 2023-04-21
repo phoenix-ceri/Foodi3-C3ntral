@@ -1,49 +1,32 @@
-import { Link, NavLink } from 'react-router-dom'
-import './index.scss'
-import Avatar from '../../assets/images/EvaAvatarPic.svg'
-import GreenSubtitle from '../../assets/images/GreenSubtitle.svg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBook, faUser, faHome } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { Link, NavLink } from 'react-router-dom';
+import './index.scss';
+import Logo from '../../assets/images/svg/Logo-with-black-double-border.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBook, faUser, faHome, faHeartCircleCheck, faPeopleRoof } from '@fortawesome/free-solid-svg-icons';
+import '../../assets/fonts';
 
 const Sidebar = () => (
     <div className='nav-bar'>
         <Link className='logo' to='/'>
-            <img src={Avatar} alt='Eva Avatar' />
-            <img className='sub-logo' src={GreenSubtitle} alt='Green Eva Perez' />
+            <img src={Logo} alt='Logo with black frame' />
         </Link>
         <nav>
             <NavLink exact='true' activeclassname='active' to='/'>
                 <FontAwesomeIcon icon={faHome} color='#819863' />
             </NavLink>
-            <NavLink exact='true' activeclassname='active' className='about-link' to='/about'>
+            <NavLink exact='true' activeclassname='active' className='profile-link' to='/profile'>
                 <FontAwesomeIcon icon={faUser} color='#819863' />
             </NavLink>
-            <NavLink exact='true' activeclassname='active' className='recipes-link' to='/contact'>
+            <NavLink exact='true' activeclassname='active' className='recipes-link' to='/recipes'>
                 <FontAwesomeIcon icon={faBook} color='#819863' />
             </NavLink>
-            <NavLink exact='true' activeclassname='active' className='myPlans-link' to='/contact'>
+            <NavLink exact='true' activeclassname='active' className='myPlans-Cart-link' to='/myMealPlanCart'>
                 <FontAwesomeIcon icon={faHeartCircleCheck} color='#819863' />
             </NavLink>
-            <NavLink exact='true' activeclassname='active' className='myPlans-link' to='/contact'>
+            <NavLink exact='true' activeclassname='active' className='about-us-link' to='/aboutUs'>
                 <FontAwesomeIcon icon={faPeopleRoof} color='#819863' />
             </NavLink>
-            <NavLink exact='true' activeclassname='active' className='myPlans-link' to='/contact'>
-                <FontAwesomeIcon icon={faCubesStacked} color='#819863' />
-            </NavLink>
         </nav>
-        <ul>
-            <li>
-                <a target='_blank' rel='noreferrer' href='https://www.linkedin.com/in/eva-judith-perez/'>
-                    <FontAwesomeIcon icon={faLinkedin} color='#819863' />
-                </a>
-            </li>
-            <li>
-                <a target='_blank' rel='noreferrer' href='https://github.com/Geckogiggles'>
-                    <FontAwesomeIcon icon={faGithub} color='#819863' />
-                </a>
-            </li>
-        </ul>
     </div>
 )
 
