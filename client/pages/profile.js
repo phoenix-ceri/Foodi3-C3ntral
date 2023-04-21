@@ -5,6 +5,8 @@ import AboutUs from "../components/aboutus";
 import MealPlanList from "../components/mealPlanList";
 import Calendar from "../components/calendar";
 import RecipeList from "../components/recipelist";
+import Calendar from "../components/calendar";
+
 
 
 const Profile = () => {
@@ -12,6 +14,7 @@ const Profile = () => {
     <main>
       <div className="container">
         <AboutUs />
+        <MyCalander />
         <MealPlanList />
         <Calendar />
         <RecipeList/>
