@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 const ratingSchema = require('./Rating');
-const recipedetailSchema = require('./RecipeDetails')
+const recipeDetailSchema = require('./RecipeDetails')
 const { Schema } = mongoose;
 
 //was product model, started modifying to be recipe model, not fully completed yet. Thinking category will be 'plan' or 'mealplan'
 
 const recipeSchema = new Schema({
-  spoonRecipe: [recipedetailSchema],
+  spoonRecipe: [recipeDetailSchema],
   ratings: [ratingSchema]
 });
 
