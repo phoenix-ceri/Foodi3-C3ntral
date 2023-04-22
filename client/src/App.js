@@ -1,7 +1,18 @@
-import './App.scss';
+import './App.css';
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
+import Layout1 from './components/Layout1'
+import Layout2 from './components/Layout2'
 import Home from './components/Home'
+import Profile from './components/Profile'
+import Recipes from './components/Recipes'
+import MealPlans from './components/MealPlans'
+import AboutUs from './components/AboutUs'
+import Login from './components/Login'
+
+//Layout = Nav on Bottom
+//Layout1 = sideNav
+//Layout2 = Nav on top under Hero
 
 function App() {
   return (
@@ -9,6 +20,21 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+        </Route>
+        <Route path="/login" element={<Layout />}>
+          <Route index element={<Login />} />
+        </Route>
+        <Route path="/profile" element={<Layout1 />}>
+          <Route index element={<Profile />} />
+        </Route>
+        <Route path="/recipes" element={<Layout1 />}>
+          <Route index element={<Recipes />} />
+        </Route>
+        <Route path="/myMealPlanCart" element={<Layout1 />}>
+          <Route index element={<MealPlans />} />
+        </Route>
+        <Route path="/aboutUs" element={<Layout2 />}>
+          <Route index element={<AboutUs />} />
         </Route>
       </Routes>
     </>
