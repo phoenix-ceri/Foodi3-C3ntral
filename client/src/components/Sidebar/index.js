@@ -18,6 +18,7 @@ const Sidebar = () => (
                 <FontAwesomeIcon icon={faUser} color='#819863' />
             </NavLink>
             <NavLink exact='true' activeclassname='active' className='recipes-link' to='/recipes'>
+
                 <FontAwesomeIcon icon={faBook} color='#819863' />
             </NavLink>
             <NavLink exact='true' activeclassname='active' className='myPlans-Cart-link' to='/myMealPlanCart'>
