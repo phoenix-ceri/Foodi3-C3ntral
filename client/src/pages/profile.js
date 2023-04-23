@@ -1,4 +1,4 @@
-jeff
+// jeff
 
 import React from "react";
 import AboutUs from "../components/aboutus";
@@ -14,7 +14,7 @@ const Profile = () => {
         <AboutUs />
         <MealPlanList />
         <Calendar />
-        <RecipeList/>
+        <RecipeList />
       </div>
     </main>
   );
