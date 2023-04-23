@@ -1,50 +1,40 @@
-// jeff
-
 import React from 'react';
+import RecipeList from './recipeList';
 
-// Import the `useParams()` hook
-import { useParams } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
+function SelectedRecipe(props) {
+  const { recipe } = props;
 
-import { QUERY_SINGLE_RECIPE } from '../utils/queries';
-
-const SingleRecipe = () => {
-  // Use `useParams()` to retrieve value of the route parameter `:profileId`
-  const { recipeId } = useParams();
-
-  const { loading, data } = useQuery(QUERY_SINGLE_RECIPE, {
-    // pass URL parameter
-    variables: { recipeId: recipeId },
-  });
-
-  const recipe = data?.recipe || {};
-
-  if (loading) {
-    return <div>Loading...</div>;
+  if (!recipe) {
+    return <div>Please select a recipe</div>;
   }
+
+  const [selectedRecipe, setSelectedRecipe] = useState(null);
+
+  const handleRecipeSelect = (recipe) => {
+    setSelectedRecipe(recipe);
+  };
+
+  const recipes = [
+    // ...
+  ];
+
+
   return (
-    <div className="my-3">
-      <h3 className="card-header bg-dark text-light p-2 m-0">
-        {recipe.title} <br />
-        <span style={{ fontSize: '1rem' }}>
-          created this recipe on {recipe.createdAt}
-        </span>
-      </h3>
-      <div className="bg-light py-4">
-        <blockquote
-          className="p-4"
-          style={{
-            fontSize: '1.5rem',
-            fontStyle: 'italic',
-            border: '2px dotted #1a1a1a',
-            lineHeight: '1.5',
-          }}
-        >
-          {recipe.description}
-        </blockquote>
-      </div>
+    <div>
+      <h2>{recipe.name}</h2>
+      <p>{recipe.description}</p>
+      <ul>
+        {recipe.ingredients.map((ingredient) => (
+          <li key={ingredient}>{ingredient}</li>
+        ))}
+      </ul>
+      <a href={recipe.url}>Link to Recipe</a>
+
+      <h1>My Recipeies</h1>
+      <RecipeList recipes={recipes} onRecipeSelect={handleRecipeSelect} />
+      <SelectedRecipe recipe={selectedRecipe} />
     </div>
   );
-};
+}
 
-export default SingleRecipe;
+export default SelectedRecipe;
