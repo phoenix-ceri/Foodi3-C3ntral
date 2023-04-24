@@ -8,7 +8,7 @@ import Profile from './pages/profile'
 import Recipes from './pages/recipes'
 import MealPlans from './pages/myMealPlanCart'
 import AboutUs from './pages/aboutus'
-import Login from './pages/login'
+import Login from './components/Login/Login'
 
 //Layout = Nav on Bottom
 //Layout1 = sideNav
@@ -24,7 +24,7 @@ function App() {
         <Route path="/login" element={<Layout />}>
           <Route index element={<Login />} />
         </Route>
-        <Route path="/profile" element={<Layout1 />}>
+        {/* <Route path="/profile" element={<Layout1 />}>
           <Route index element={<Profile />} />
         </Route>
         <Route path="/recipes" element={<Layout1 />}>
@@ -35,7 +35,7 @@ function App() {
         </Route>
         <Route path="/aboutUs" element={<Layout2 />}>
           <Route index element={<AboutUs />} />
-        </Route>
+        </Route> */}
       </Routes>
     </>
   );

@@ -1,6 +1,6 @@
 import React from "react";
-import HeroImage from "../components/hero";
-import LoginForm from "../components/Login";
+import HeroImage from "../hero";
+import LoginForm from ".";
 
 const LoginPage = () => {
   return (
