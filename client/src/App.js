@@ -1,14 +1,14 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom'
-import Layout from './components/Layout'
-import Layout1 from './components/Layout1'
-import Layout2 from './components/Layout2'
-import Home from './Pages/profile'
-import Profile from './components/Profile/index'
-import Recipes from './components/Recipes/recipeList'
-import MealPlans from './components/MealPlans/mealPlanList'
-import AboutUs from './components/AboutUs/aboutus'
-import Login from './components/Login'
+// import Layout from './components/Layout'
+// import Layout1 from './components/Layout1'
+// import Layout2 from './components/Layout2'
+import Home from './pages/home'
+import Profile from './pages/profile'
+import Recipes from './pages/recipes'
+import MealPlans from './pages/myMealPlanCart'
+import AboutUs from './pages/aboutus'
+import Login from './pages/login'
 
 //Layout = Nav on Bottom
 //Layout1 = sideNav
