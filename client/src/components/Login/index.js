@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import "./index.scss";
 
-const LoginScreen = () => {
+const Login = () => {
   return (
     <div className="login-screen">
       <Container>
@@ -34,4 +34,4 @@ const LoginScreen = () => {
   );
 };
 
-export default LoginScreen;
+export default Login;
