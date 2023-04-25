@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Calendar from './calendar';
 import 'react-calendar/dist/Calendar.css';
-import Navbar from '../../Navbars'
-import RecipeList from '../Recipe/recipeList'
-import SelectedRecipe from '../Recipe/selectedRecipe'
-import MealPlanList from '../MealPlans/mealPlanList'
+import SideBar from '../SideBar';
+import RecipeList from '../Recipe/recipeList';
+import SelectedRecipe from '../Recipe/selectedRecipe';
+import MealPlanList from '../MealPlans/mealPlanList';
 
 function Profile() {
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
@@ -28,7 +28,7 @@ function Profile() {
 
   return (
     <div>
-      <Navbar bg="light" expand="lg" sticky="top"/>
+      <SideBar bg="light" expand="lg" sticky="top"/>
       {/* My Profile*/}
       <button onClick={handleOpenCalendar}>Open Calendar</button>
       {isCalendarOpen && (

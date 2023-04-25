@@ -1,8 +1,8 @@
 import './index.scss';
-import TopNav from '../../Navbars/topNav';
+import TopNav from '../../components/TopBar';
 import { Outlet } from 'react-router';
 
-const Layout = () => {
+const TopNavLayout = () => {
     return (
         <div className='App'>
             <><TopNav /></>
@@ -19,4 +19,4 @@ const Layout = () => {
     )
 }
 
-export default Layout
+export default TopNavLayout;
