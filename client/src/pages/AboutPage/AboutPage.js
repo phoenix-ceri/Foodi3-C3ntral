@@ -11,7 +11,6 @@ const AboutPage = () => {
     <div>
       
       <Hero />
-
       <TopBar />
       <AboutTeamPage />
       <RecipeSearch />
