@@ -1,15 +1,20 @@
 import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import "./index.scss";
+import "./index.scss"
 
-const LoginScreen = () => {
+const SignupScreen = () => {
   return (
-    <div className="login-screen">
+    <div className="signup-screen">
       <Container>
         <Row>
-          <Col m={{ span: 6, offset: 3 }} className="login-screen-form">
-            <h2 className="mb-3">Login</h2>
+          <Col md={{ span: 6, offset: 3 }} className="signup-screen-form">
+            <h2 className="mb-3">Sign up</h2>
             <Form>
+              <Form.Group controlId="formBasicName">
+                <Form.Label>Name</Form.Label>
+                <Form.Control type="text" placeholder="Enter your name" />
+              </Form.Group>
+
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" />
@@ -19,13 +24,18 @@ const LoginScreen = () => {
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" />
               </Form.Group>
-<br/>
+
+              <Form.Group controlId="formBasicPasswordConfirm">
+                <Form.Label>Confirm Password</Form.Label>
+                <Form.Control type="password" placeholder="Confirm Password" />
+              </Form.Group>
+
               <Button variant="primary" type="submit">
                 Submit
               </Button>
             </Form>
             <p className="mt-3 mb-0">
-              Don't have an account? <a href="/signup">Sign up</a>
+              Already have an account? <a href="/login">Log in</a>
             </p>
           </Col>
         </Row>
@@ -34,4 +44,4 @@ const LoginScreen = () => {
   );
 };
 
-export default LoginScreen;
+export default SignupScreen;

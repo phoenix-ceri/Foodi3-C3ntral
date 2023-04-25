@@ -14,3 +14,4 @@ function AddRecipeButton({ recipe, recipes, setRecipes }) {
     </button>
   );
 }
+export default AddRecipeButton;
