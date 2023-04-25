@@ -8,14 +8,16 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
+import LoginPage from './pages/LoginPage/Login';
+import About from './pages/AboutPage/About';
+import SignUp from './pages/SignUpPage/SignUp';
+
 // import BotNavLayout from './pages/BotNavLayout'
 // import SideNavLayout from './pages/SideNavLayout'
 // import TopNavLayout from './pages/TopNavLayout'
-import Home from './pages/Home'
 // import Profile from './pages/profile'
 // import Recipes from './pages/recipes'
 // import MealPlans from './pages/myMealPlanCart'
-// import AboutUs from './pages/aboutus'
 // import Login from './components/Login/Login'
 
 //Layout = Nav on Bottom
@@ -47,8 +49,11 @@ function App() {
       <Router>
         <div>
           <Routes>
-            <Route path="/" element={<Home />}>
-
+            <Route path="/" element={<LoginPage />}>
+            </Route>
+            <Route path="/about" element={<About />}>
+            </Route>
+            <Route path="/signup" element={<SignUp />}>
             </Route>
             {/* <Route path="/login" element={<Layout />}>
           <Route index element={<Login />} />

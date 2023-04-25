@@ -1,18 +1,19 @@
 import React from "react";
-import HeroImage from "./components/hero";
-import AboutTeamPage from "./components/About";
-import TopNav from "./components/topNav/topNav"
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import "./About.css"
+import Hero from "../../components/Hero";
+import AboutTeamPage from "../../components/About";
+import TopBar from "../../components/TopBar";
+import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import "./About.css";
 
-const LoginPage = () => {
+const AboutPage = () => {
   return (
     <div>
-      <HeroImage />
-      <TopNav />
+      <Hero />
+      <TopBar />
       <AboutTeamPage />
     </div>
   );
 };
 
-export default LoginPage;
+export default AboutPage;
+
