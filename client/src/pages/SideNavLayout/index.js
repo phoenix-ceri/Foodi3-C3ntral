@@ -1,8 +1,8 @@
 import './index.scss';
-import Sidebar from '../Sidebar';
+import Sidebar from '../../components/Sidebar';
 import { Outlet } from 'react-router';
 
-const Layout = () => {
+const SideNavLayout = () => {
     return (
         <div className='App'>
             <><Sidebar /></>
@@ -22,4 +22,4 @@ const Layout = () => {
     )
 }
 
-export default Layout
+export default SideNavLayout;

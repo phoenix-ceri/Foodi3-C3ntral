@@ -1,8 +1,8 @@
 import './index.scss';
-import BotNav from '../../NavBars/botNav';
+import BotNav from '../../components/BotBar';
 import { Outlet } from 'react-router';
 
-const Layout1 = () => {
+const BotNavLayout = () => {
     return (
         <div className='App'>
 
@@ -23,6 +23,6 @@ const Layout1 = () => {
     )
 }
 
-export default Layout1
+export default BotNavLayout;
 
 //Components: Hero, BotBar, Signup, Login, 
