@@ -1,12 +1,9 @@
-const { Schema, Types } = require('mongoose');
+const mongoose = require('mongoose');
+const { Schema, Types } = mongoose;
 
 // Schema to create a rating subdocument
 const ratingSchema = new Schema(
   {
-    ratingId: {
-      type: Schema.Types.ObjectId,
-      default: () => new Types.ObjectId(),
-    },
     value: {
       type: Number,
       required: true,
@@ -22,7 +19,7 @@ const ratingSchema = new Schema(
       required: true,
     },
     createdAt: {
-      type: Date,
+      type: String,
       default: Date.now,
     }
   },
@@ -33,5 +30,6 @@ const ratingSchema = new Schema(
     id: false,
   }
 );
+const Rating = mongoose.model('Rating', ratingSchema);
 
-module.exports = ratingSchema;
+module.exports = Rating;

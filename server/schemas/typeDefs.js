@@ -2,25 +2,42 @@ const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
 
-  type Category (Specifications, ie vegan, keto, etc.) {
-    _id: ID
-    name: String
+  type Rating {
+    value: Int
+    commentBody: String
+    username: String
+    createdAt: String
   }
 
-  type Product (Recipe?) {
+  type Recipe {
     _id: ID
-    name: String
-    description: String
+    spoonRecipe: [RecipeDetails]
+    ratings: [Rating]
+  }
+
+  type RecipeDetails {
+    _id: ID
+    spoonId: Int
+    title: String
     image: String
-    quantity: Int
-    price: Float
-    category: Category
+    imageType: String
+    servings: Int
+    readyInMinutes: Int
+    spoonacularSourceUrl: String
+    pricePerServing: Float
+    cheap: Boolean
+    dishTypes: [String]
+    extendedIngredients: [String]
+    summary: String
+    winePairing: [String]
   }
 
-  type Order (MealPlan?) {
+  type MealPlan {
     _id: ID
-    purchaseDate: String
-    products: [Product]
+    creationDate: String
+    slot: Int!
+    position: Int!
+    recipes: [Recipe]
   }
 
   type User {
@@ -28,12 +45,8 @@ const typeDefs = gql`
     firstName: String
     lastName: String
     email: String
-    mealPlans: [mealPlan]
-    recipes: [recipes]
-  }
-
-  type Checkout {
-    session: ID
+    mealPlans: [MealPlan]
+    recipes: [Recipe]
   }
 
   type Auth {
@@ -42,29 +55,14 @@ const typeDefs = gql`
   }
 
   type Query {
-    categories: [Category]
-    products(category: ID, name: String): [Product]
-    product(_id: ID!): Product
-    user: User
-    order(_id: ID!): Order
-    checkout(products: [ID]!): Checkout
+    getAllRecipes: [Recipe]
   }
 
   type Mutation {
     addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
-    addOrder(products: [ID]!): Order
-    updateUser(firstName: String, lastName: String, email: String, password: String): User
-    updateProduct(_id: ID!, quantity: Int!): Product
+    removeRecipes(recipes: [ID]!): MealPlan
+    addToMealPlan(_id: ID!, slot: Int!, position: Int!): MealPlan
     login(email: String!, password: String!): Auth
-  }
-
-  //modified one for foodiecentral
-  type Mutation {
-    addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
-    addPlan(plans: [ID]!): Checkout
-
-
-
   }
 `;
 
