@@ -14,7 +14,7 @@ const Profile = () => {
         <AboutUs />
         <MealPlanList />
         <Calendar />
-        <RecipeList/>
+        <RecipeList />
       </div>
     </main>
   );

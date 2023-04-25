@@ -15,13 +15,7 @@ const mealPlanSchema = new Schema({
   },
   position: {
     type: Number,
-  },
-  // type: {
-  //   //if this is always going to be recipe for us (isn't it always going to be recipe?), then do we need to specify this? 
-  //   type: String,
-  // },
-  value: {
-    type: Array,
+    required: true,
   },
   recipes: [
     {
