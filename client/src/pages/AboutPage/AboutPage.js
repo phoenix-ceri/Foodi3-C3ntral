@@ -4,16 +4,17 @@ import AboutTeamPage from "../../components/About";
 import TopBar from "../../components/TopBar";
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import "./About.css";
-import recipeSearch from "../../components/Recipes/recipeSearch";
+import RecipeSearch from "../../components/Recipes/recipeSearch";
 
 const AboutPage = () => {
   return (
     <div>
-      <recipeSearch />
+      
       <Hero />
 
       <TopBar />
       <AboutTeamPage />
+      <RecipeSearch />
     </div>
   );
 };
