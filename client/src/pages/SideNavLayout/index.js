@@ -1,20 +1,19 @@
 import './index.scss';
-import BotNav from '../../Navbars/botNav';
+import Sidebar from '../../components/Sidebar';
 import { Outlet } from 'react-router';
 
-const Layout1 = () => {
+const SideNavLayout = () => {
     return (
         <div className='App'>
-
+            <><Sidebar /></>
             <div className='page'>
                 <span className='tags top-tags'>&lt;body&gt;</span>
+
                 <Outlet />
+
                 <span className='tags bottom-tags'>
                     &lt;body&gt;
                     <br />
-                    <div>
-                        <><BotNav /></>
-                    </div>
                     <span className='bottom-tag-html'>&lt;/html&gt;</span>
                 </span>
 
@@ -23,4 +22,4 @@ const Layout1 = () => {
     )
 }
 
-export default Layout1
+export default SideNavLayout;

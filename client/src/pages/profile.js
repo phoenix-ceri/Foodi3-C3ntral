@@ -1,7 +1,7 @@
 //jeff
 
 import React from "react";
-import AboutUs from "../components/aboutus";
+import AboutUs from "../components/About";
 import MealPlanList from "../components/mealPlanList";
 import Calendar from "../components/calendar";
 import RecipeList from "../components/recipelist";
