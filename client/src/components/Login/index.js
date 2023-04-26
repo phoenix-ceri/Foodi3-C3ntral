@@ -5,6 +5,7 @@ import { Link, Router, useNavigate } from 'react-router-dom'
 import { LOGIN } from '../../utils/mutations'
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import "./index.scss";
+
 const Login = (props) => {
   const navigate = useNavigate();
 
@@ -19,8 +20,8 @@ const Login = (props) => {
       });
       const token = mutationResponse.data.login.token;
       Auth.login(token);
-      //this is where we redirect
-      return navigate('/about');
+      // //this is where we redirect
+      // return navigate('/about');
     } catch (e) {
       console.log(e);
     }
@@ -74,6 +75,44 @@ const Login = (props) => {
         </Row>
       </Container>
     </div>
+
+    //   <div className="container my-1">
+
+    //   <h2>Login</h2>
+    //   <form onSubmit={handleFormSubmit}>
+    //     <div className="flex-row space-between my-2">
+    //       <label htmlFor="email">Email address:</label>
+    //       <input
+    //         placeholder="youremail@test.com"
+    //         name="email"
+    //         type="email"
+    //         id="email"
+    //         onChange={handleChange}
+    //       />
+    //     </div>
+    //     <div className="flex-row space-between my-2">
+    //       <label htmlFor="pwd">Password:</label>
+    //       <input
+    //         placeholder="******"
+    //         name="password"
+    //         type="password"
+    //         id="pwd"
+    //         onChange={handleChange}
+    //       />
+    //     </div>
+    //     {error ? (
+    //       <div>
+    //         <p className="error-text">The provided credentials are incorrect</p>
+    //       </div>
+    //     ) : null}
+    //     <div className="flex-row flex-end">
+    //       <button type="submit">Submit</button>
+    //     </div>
+    //   </form>
+    //   <p>
+    //   <Link to="/signup">← Go to Signup</Link>
+    //   </p>
+    // </div>
   );
 };
 
