@@ -56,6 +56,8 @@ const typeDefs = gql`
 
   type Query {
     getAllRecipes: [Recipe]
+    getSingleRecipe: [Recipe]
+    getComments: [Rating]
   }
 
   type Mutation {

@@ -124,14 +124,14 @@ db.once('open', async () => {
     lastName: 'Flinn',
     email: 'kflinn@testmail.com',
     password: 'password12345',
-    mealPlans: [
-      {
-        recipes: [recipes[0]._id, recipes[0]._id, recipes[1]._id]
-      }
-    ],
-    friends: [
-      {}
-    ]
+    // mealPlans: [
+    //   {
+    //     recipes: [recipes[0]._id, recipes[0]._id, recipes[1]._id]
+    //   }
+    // ],
+    // friends: [
+    //   {}
+    // ]
   });
 
   await User.create({
