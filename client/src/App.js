@@ -8,9 +8,9 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-import LoginPage from './pages/LoginPage/Login';
-import AboutPage from './pages/AboutPage/AboutPage';
-import SignUp from './pages/SignUpPage/SignUp';
+import LoginPage from './Pages/LoginPage/Login';
+import AboutPage from './Pages/AboutPage/AboutPage';
+import SignUp from './Pages/SignUpPage/SignUp';
 
 // import BotNavLayout from './pages/BotNavLayout'
 // import SideNavLayout from './pages/SideNavLayout'

@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { useMutation } from '@apollo/client';
 import Auth from '../../utils/auth';
-import { Link } from 'react-router-dom'
+import { Link, Router, useNavigate } from 'react-router-dom'
 import { LOGIN } from '../../utils/mutations'
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import "./index.scss";
-
 const Login = (props) => {
-  const [formState, setFormState] = useState({ email: '', password: ''});
+  const navigate = useNavigate();
+
+  const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN);
 
   const handleFormSubmit = async (event) => {
@@ -18,6 +19,8 @@ const Login = (props) => {
       });
       const token = mutationResponse.data.login.token;
       Auth.login(token);
+      //this is where we redirect
+      return navigate('/about');
     } catch (e) {
       console.log(e);
     }
@@ -38,25 +41,25 @@ const Login = (props) => {
           <Col m={{ span: 6, offset: 3 }} className="login-screen-form">
             <h2 className="mb-3">Login</h2>
             <Form onSubmit={handleFormSubmit}>
-              <Form.Group controlId="formBasicEmail">
+              <Form.Group >
                 <Form.Label>Email address</Form.Label>
-                <Form.Control 
-                name="email" 
-                type="email" 
-                id="email" 
-                placeholder="Enter email" 
-                onChange={handleChange} 
+                <Form.Control
+                  name="email"
+                  type="email"
+                  id="email"
+                  placeholder="Enter email"
+                  onChange={handleChange}
                 />
               </Form.Group>
 
-              <Form.Group controlId="formBasicPassword">
+              <Form.Group >
                 <Form.Label>Password</Form.Label>
-                <Form.Control 
-                name="password" 
-                type="password" 
-                id="pwd" 
-                placeholder="Password" 
-                onChange={handleChange} 
+                <Form.Control
+                  name="password"
+                  type="password"
+                  id="pwd"
+                  placeholder="Password"
+                  onChange={handleChange}
                 />
               </Form.Group>
               <br />
@@ -65,7 +68,7 @@ const Login = (props) => {
               </Button>
             </Form>
             <p className="mt-3 mb-0">
-            Don't have an account? <Link to="/signup">← Go to Signup</Link>
+              Don't have an account? <Link to="/signup">← Go to Signup</Link>
             </p>
           </Col>
         </Row>

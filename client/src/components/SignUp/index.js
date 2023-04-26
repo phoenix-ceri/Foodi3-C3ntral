@@ -30,7 +30,7 @@ const SignupScreen = (props) => {
       [name]: value,
     });
   };
-  
+
   return (
     <div className="signup-screen">
       <Container>
@@ -38,43 +38,38 @@ const SignupScreen = (props) => {
           <Col md={{ span: 6, offset: 3 }} className="signup-screen-form">
             <h2 className="mb-3">Sign up</h2>
             <Form onSubmit={handleFormSubmit}>
-              <Form.Group controlId="formBasicName">
+              <Form.Group>
                 <Form.Label>Name</Form.Label>
-                <Form.Control 
-                name="name"
-                type="text"
-                id="name" 
-                placeholder="Enter your name"
-                onChange={handleChange} 
+                <Form.Control
+                  name="name"
+                  type="text"
+                  id="name"
+                  placeholder="Enter your name"
+                  onChange={handleChange}
                 />
               </Form.Group>
 
-              <Form.Group controlId="formBasicEmail">
+              <Form.Group>
                 <Form.Label>Email address</Form.Label>
-                <Form.Control 
-                name="email"
-                type="email"
-                id="email" 
-                placeholder="Enter email" 
-                onChange={handleChange}
+                <Form.Control
+                  name="email"
+                  type="email"
+                  id="email"
+                  placeholder="Enter email"
+                  onChange={handleChange}
                 />
               </Form.Group>
 
-              <Form.Group controlId="formBasicPassword">
+              <Form.Group>
                 <Form.Label>Password</Form.Label>
-                <Form.Control 
-                name="password"
-                type="password"
-                id="pwd" 
-                placeholder="Password" 
-                onChange={handleChange}
+                <Form.Control
+                  name="password"
+                  type="password"
+                  id="pwd"
+                  placeholder="Password"
+                  onChange={handleChange}
                 />
               </Form.Group>
-
-              {/* <Form.Group controlId="formBasicPasswordConfirm">
-                <Form.Label>Confirm Password</Form.Label>
-                <Form.Control type="password" placeholder="Confirm Password" />
-              </Form.Group> */}
 
               <Button variant="primary" type="submit">
                 Submit
