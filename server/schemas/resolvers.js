@@ -10,16 +10,17 @@ const resolvers = {
     getAllRecipes: async () => {
       const recipes = await Recipe.find();
       return recipes;
-    }
-    //   //grabbing the user that is logged in
-    //   //args is like the req.body
-    //   // me: async (parent, args, context) => {
-    //   //   if (context.user) {
-    //   //     console.log("USER", context.user)
-    //   //     return User.findOne({ _id: context.user._id });
-    //   //   }
-    //   //   throw new AuthenticationError('You need to be logged in!');
-    //   // },
+    },
+    getSingleRecipe:
+      async () => {
+        const singleRecipe = await Recipe.find();
+        return singleRecipe;
+      },
+    getComments:
+      async () => {
+        const comments = await Rating.find();
+        return comments;
+      }
   },
 
   Mutation: {

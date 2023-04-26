@@ -11,7 +11,7 @@ const LoginPage = () => {
       <Hero />
       <Login />
       <br />
-      {/* <BotBar /> */}
+      <BotBar />
     </div>
   );
 };

@@ -3,13 +3,14 @@ import { Container, Row, Col, Image } from 'react-bootstrap';
 import "./index.scss"
 
 function AboutTeamPage() {
+  alert('STOP');
   const teamMembers = [
     {
       name: 'Eva Perez',
       title: 'Co-Lead & Backend',
       image: 'https://media.discordapp.net/attachments/1068322599186202717/1098765556506689586/eva-transformed.png?width=497&height=671',
       bio:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac metus eget velit suscipit commodo a sed nulla.',
+        "Eva is a Guatemalan-Chinese Woman with a desire to learn, grow, and create using any and all of her skills ranging from leadership to full-stack web development, to cross-cultural communications. She owned her own Etsy business making custom jewelry and studied medicine, languages, and technology to make a conglomerate of widely-versed skill sets.",
     },
     {
       name: 'Jeff Zulma',
@@ -41,14 +42,14 @@ function AboutTeamPage() {
         {teamMembers.map((member, index) => (
           <Col key={index}>
             <div className='aboutimg'>
-            <Image src={member.image} roundedCircle />
+              <Image src={member.image} roundedCircle />
             </div>
             <div className='aboutcard'>
-            <h3>{member.name}</h3>
-            <h4>{member.title}</h4>
-            <p>{member.bio}</p>
+              <h3>{member.name}</h3>
+              <h4>{member.title}</h4>
+              <p>{member.bio}</p>
             </div>
-            <br/>
+            <br />
           </Col>
         ))}
       </Row>

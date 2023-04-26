@@ -11,7 +11,7 @@ const SignUp = () => {
       <Hero />
       <SignupScreen />
       <br/>
-      {/* <BotBar /> */}
+      <BotBar />
     </div>
   );
 };
