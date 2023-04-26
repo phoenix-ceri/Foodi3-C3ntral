@@ -3,13 +3,14 @@ import { Container, Row, Col, Image } from 'react-bootstrap';
 import "./index.scss"
 
 function AboutTeamPage() {
+  alert('STOP');
   const teamMembers = [
     {
       name: 'Eva Perez',
       title: 'Co-Lead & Backend',
       image: 'https://media.discordapp.net/attachments/1068322599186202717/1098765556506689586/eva-transformed.png?width=497&height=671',
       bio:
-        "I am a Guatemalan-Chinese Woman with a desire to learn, grow, and create using any and all of my skills ranging from leadership to full-stack web development, to cross-cultural communications. I owned my own Etsy business making custom jewelry and I studied medicine, languages, and technology to make a conglomerate of widely-versed skill sets.",
+        "Eva is a Guatemalan-Chinese Woman with a desire to learn, grow, and create using any and all of her skills ranging from leadership to full-stack web development, to cross-cultural communications. She owned her own Etsy business making custom jewelry and studied medicine, languages, and technology to make a conglomerate of widely-versed skill sets.",
     },
     {
       name: 'Jeff Zulma',
