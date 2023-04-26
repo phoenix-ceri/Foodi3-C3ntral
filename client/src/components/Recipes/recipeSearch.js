@@ -1,19 +1,70 @@
-import React from "react";
-import spoonacular from "../../utils/api";
-function recipeSearch() {
-    function callAPI() {
-        spoonacular('chicken').then(response => response.json()).then(data => console.log(data))
-    }
-    return (
-        <div class="input-group input-group-sm mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-sm">Small</span>
-            </div>
-            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-            </input>
-            <button type="button" onClick={callAPI}></button>
-        </div>
-    )
-}
+import React, { useState } from 'react';
+import axios from 'axios';
+import "./app.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDice } from '@fortawesome/free-solid-svg-icons';
+const REACT_APP_API_KEY = process.env.REACT_APP_SPOONACULAR_API_KEY;
+const element = <FontAwesomeIcon icon={faDice} size="2xl" style={{color: "#ffffff",}} />
 
-export default recipeSearch;
+const App = () => {
+  const [query, setQuery] = useState('');
+  const [recipes, setRecipes] = useState([]);
+
+  const search = async () => {
+    const response = await axios.get(
+      `https://api.spoonacular.com/recipes/complexSearch?apiKey=${REACT_APP_API_KEY}&query=${query}`
+    );
+    setRecipes(response.data.results);
+  };
+
+  const getRandomRecipes = async () => {
+    const response = await axios.get(
+      `https://api.spoonacular.com/recipes/random?apiKey=${REACT_APP_API_KEY}&number=9`
+    );
+    setRecipes(response.data.recipes);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    search();
+  };
+
+  const handleInputChange = (e) => {
+    setQuery(e.target.value);
+  };
+
+  const handleRandomClick = () => {
+    getRandomRecipes();
+    setQuery('');
+  };
+
+  return (
+    <div className="container">
+      <h1>Recipe Search</h1>
+      <form onSubmit={handleSubmit}>
+        <div className="search">
+          <input
+            type="text"
+            placeholder="Search for recipes..."
+            value={query}
+            onChange={handleInputChange}
+          />
+          <button type="submit">Search</button>
+        </div>
+      </form>
+      <button className="random" onClick={handleRandomClick}>
+      {element}
+      </button>
+      <div className="recipes">
+        {recipes.map((recipe) => (
+          <div key={recipe.id} className="recipe">
+            <img src={recipe.image} alt={recipe.title} />
+            <h2>{recipe.title}</h2>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default App;
