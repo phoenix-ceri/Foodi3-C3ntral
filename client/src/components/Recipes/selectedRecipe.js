@@ -30,7 +30,7 @@ function SelectedRecipe(props) {
       </ul>
       <a href={recipe.url}>Link to Recipe</a>
 
-      <h1>My Recipeies</h1>
+      <h1>My Recipes</h1>
       <RecipeList recipes={recipes} onRecipeSelect={handleRecipeSelect} />
       <SelectedRecipe recipe={selectedRecipe} />
     </div>
