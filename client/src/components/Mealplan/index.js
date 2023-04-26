@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Form, Col } from 'react-bootstrap';
 import './index.css';
 
-const API_KEY = process.env.SPOONACULAR_API_KEY;
+const REACT_APP_SPOONACULAR_API_KEY = process.env.REACT_APP_SPOONACULAR_API_KEY;
 
 const CalendarForm = () => {
   const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
@@ -11,9 +11,9 @@ const CalendarForm = () => {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
   const handleRecipeSelect = async (day, meal) => {
-    const searchResponse = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&query=${day} ${meal}`);
+    const searchResponse = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${REACT_APP_SPOONACULAR_API_KEY}&query=${day} ${meal}`);
     const { results } = await searchResponse.json();
-    const recipeDetailsResponse = await fetch(`https://api.spoonacular.com/recipes/${results[0].id}/information?apiKey=${API_KEY}`);
+    const recipeDetailsResponse = await fetch(`https://api.spoonacular.com/recipes/${results[0].id}/information?apiKey=${REACT_APP_SPOONACULAR_API_KEY}`);
     const recipeDetails = await recipeDetailsResponse.json();
     setSelectedRecipe({ day, meal, recipe: recipeDetails });
   };
