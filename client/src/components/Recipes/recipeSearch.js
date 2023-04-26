@@ -6,7 +6,7 @@ import { faDice } from '@fortawesome/free-solid-svg-icons';
 const REACT_APP_API_KEY = process.env.REACT_APP_SPOONACULAR_API_KEY;
 const element = <FontAwesomeIcon icon={faDice} size="2xl" style={{color: "#ffffff",}} />
 
-const App = () => {
+const Search = () => {
   const [query, setQuery] = useState('');
   const [recipes, setRecipes] = useState([]);
 
@@ -67,4 +67,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Search;
