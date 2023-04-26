@@ -6,7 +6,6 @@ export const QUERY_MEALPLANS = gql`
       _id
       name
       description
-      image
       creationDate
     }
   }
