@@ -8,9 +8,12 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-import LoginPage from './Pages/LoginPage/Login';
-import AboutPage from './Pages/AboutPage/AboutPage';
-import SignUp from './Pages/SignUpPage/SignUp';
+import LoginPage from './pages/LoginPage/Login';
+import AboutPage from './pages/AboutPage/AboutPage';
+import SignUp from './pages/SignUpPage/SignUp';
+import ProfilePage from './pages/ProfilePage';
+
+// import SearchPage from './pages/RecipePage/searchRecipe';
 
 // import BotNavLayout from './pages/BotNavLayout'
 // import SideNavLayout from './pages/SideNavLayout'
@@ -49,12 +52,16 @@ function App() {
       <Router>
         <div>
           <Routes>
-            <Route path="/" element={<LoginPage />}>
+            <Route path="/" element={<ProfilePage />}>
+            </Route>
+            <Route path="/login" element={<LoginPage />}>
             </Route>
             <Route path="/about" element={<AboutPage />}>
             </Route>
             <Route path="/signup" element={<SignUp />}>
             </Route>
+            {/* <Route path="/search" element={<SearchPage />}>
+            </Route> */}
             {/* <Route path="/login" element={<Layout />}>
           <Route index element={<Login />} />
         </Route> */}

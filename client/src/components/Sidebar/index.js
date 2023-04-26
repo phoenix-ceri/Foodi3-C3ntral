@@ -3,7 +3,7 @@ import './index.scss';
 import Logo from '../../assets/images/svg/Logo-with-black-double-border.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook, faUser, faHome, faHeartCircleCheck, faPeopleRoof } from '@fortawesome/free-solid-svg-icons';
-import '../../assets/fonts';
+import '../../assets/fonts/fonts.css';
 
 const Sidebar = () => (
     <div className='nav-bar'>
