@@ -1,44 +1,14 @@
-import React, { useState } from 'react';
-import Calendar from './calendar';
-import 'react-calendar/dist/Calendar.css';
+import React from 'react';
 import SideBar from '../SideBar';
-import RecipeList from '../Recipe/recipeList';
-import SelectedRecipe from '../Recipe/selectedRecipe';
-import MealPlanList from '../MealPlans/mealPlanList';
+import Calendar from '../Calendar';
+
 
 function Profile() {
-  const [isCalendarOpen, setIsCalendarOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const handleLogin = () => {
-    setIsLoggedIn(true);
-  };
-
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-  };
-
-  const handleOpenCalendar = () => {
-    setIsCalendarOpen(true);
-  };
-
-  const handleCloseCalendar = () => {
-    setIsCalendarOpen(false);
-  };
 
   return (
     <div>
-      <SideBar bg="light" expand="lg" sticky="top"/>
-      {/* My Profile*/}
-      <button onClick={handleOpenCalendar}>Open Calendar</button>
-      {isCalendarOpen && (
-        <div className="modal-overlay">
-          <div className="modal">
+      <SideBar bg="light" expand="lg" sticky="top"/> 
             <Calendar />
-            <button onClick={handleCloseCalendar}>Close Calendar</button>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
