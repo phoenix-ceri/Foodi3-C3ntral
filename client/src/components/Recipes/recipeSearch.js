@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import "./app.css";
+import "./recipeSearch.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDice } from '@fortawesome/free-solid-svg-icons';
 const REACT_APP_API_KEY = process.env.REACT_APP_SPOONACULAR_API_KEY;
