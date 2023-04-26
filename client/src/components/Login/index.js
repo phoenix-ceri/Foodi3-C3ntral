@@ -7,7 +7,7 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import "./index.scss";
 
 const Login = (props) => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN);
