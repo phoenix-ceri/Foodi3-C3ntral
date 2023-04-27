@@ -3,12 +3,12 @@
 .nav-bar {
     background-image: url('../../assets/images/png/Food-picture.png');
     background-repeat: repeat-y;
-    width: 200px;
+    width: 150px;
     height:100%;
     position: absolute;
     top: 0;
     z-index: 3;
-    min-height: 500px;
+    min-height: 100vh;
     font-family: 'Raleway', sans-serif;
 
     .logo {
@@ -18,7 +18,7 @@
         img {
             display: block;
             margin: 8px auto;
-            width: 50px;
+            width:auto;
             height: auto;
         }
     }
@@ -100,9 +100,9 @@ nav {
         }
     }
 
-    a.myPlans-Cart-link {
+    a.about-us-link {
         &:after {
-            content: 'MY PLAN';
+            content: 'ABOUT US';
             color: black;
         }
     }

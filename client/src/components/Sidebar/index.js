@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import './index.scss';
-import Logo from '../../assets/images/svg/Logo-with-black-double-border.svg';
+import Logo from '../../assets/images/png/Logo-w-frame.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook, faUser, faHome, faHeartCircleCheck, faPeopleRoof } from '@fortawesome/free-solid-svg-icons';
 import '../../assets/fonts/fonts.css';
@@ -21,9 +21,6 @@ const Sidebar = () => (
 
                 <FontAwesomeIcon icon={faBook} color='#819863' />
             </NavLink>
-            <NavLink exact='true' activeclassname='active' className='myPlans-Cart-link' to='/myMealPlanCart'>
-                <FontAwesomeIcon icon={faHeartCircleCheck} color='#819863' />
-            </NavLink>
             <NavLink exact='true' activeclassname='active' className='about-us-link' to='/aboutUs'>
                 <FontAwesomeIcon icon={faPeopleRoof} color='#819863' />
             </NavLink>
@@ -31,4 +28,4 @@ const Sidebar = () => (
     </div>
 )
 
-export default Sidebar
+export default Sidebar;

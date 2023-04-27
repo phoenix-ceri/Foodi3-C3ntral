@@ -9,10 +9,10 @@ import RecipeSearch from "../../components/Recipes/recipeSearch";
 const AboutPage = () => {
   return (
     <div>
-      
       <Hero />
       <TopBar />
       <AboutTeamPage />
+
       <RecipeSearch />
     </div>
   );
