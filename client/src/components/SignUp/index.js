@@ -39,12 +39,23 @@ const SignupScreen = (props) => {
             <h2 className="mb-3">Sign up</h2>
             <Form onSubmit={handleFormSubmit}>
               <Form.Group>
-                <Form.Label>Name</Form.Label>
+                <Form.Label>First Name</Form.Label>
                 <Form.Control
-                  name="name"
+                  name="firstName"
                   type="text"
-                  id="name"
-                  placeholder="Enter your name"
+                  id="firstName"
+                  placeholder="Enter your first name"
+                  onChange={handleChange}
+                />
+              </Form.Group>
+
+              <Form.Group>
+                <Form.Label>Last Name</Form.Label>
+                <Form.Control
+                  name="lastName"
+                  type="text"
+                  id="lastName"
+                  placeholder="Enter your last name"
                   onChange={handleChange}
                 />
               </Form.Group>
