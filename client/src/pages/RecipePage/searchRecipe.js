@@ -1,7 +1,7 @@
 import React from "react";
 import Search from "../../components/Recipes/recipeSearch";
 import HeroImage from "../../components/Hero";
-import Sidebar from "../../components/SideBar";
+import Sidebar from "../../components/Sidebar";
 
 const SearchPage = () => {
     return (
