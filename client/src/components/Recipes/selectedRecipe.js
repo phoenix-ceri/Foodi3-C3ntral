@@ -1,38 +1,21 @@
-import React from 'react';
-import RecipeList from './recipeList';
+import { useParams } from 'react-router-dom';
+import {RecipeModal} from '../Modal/modal'
 
-function SelectedRecipe(props) {
-  const { recipe } = props;
-
-  if (!recipe) {
-    return <div>Please select a recipe</div>;
-  }
-
-  const [selectedRecipe, setSelectedRecipe] = useState(null);
-
-  const handleRecipeSelect = (recipe) => {
-    setSelectedRecipe(recipe);
-  };
-
-  const recipes = [
-    // ...
-  ];
-
+function SelectedRecipe({ recipes }) {
+  const { id } = useParams();
+  const recipe = recipes.find((recipe) => recipe.id === id);
 
   return (
     <div>
-      <h2>{recipe.name}</h2>
-      <p>{recipe.description}</p>
-      <ul>
-        {recipe.ingredients.map((ingredient) => (
-          <li key={ingredient}>{ingredient}</li>
+      <h2>{recipe.title}</h2>
+      <img src={recipe.image} alt={recipe.title} />
+      <h3>Description:</h3>
+      <ol>
+        {recipe.description.map((description, index) => (
+          <li key={index}>{description}</li>
         ))}
-      </ul>
-      <a href={recipe.url}>Link to Recipe</a>
-
-      <h1>My Recipes</h1>
-      <RecipeList recipes={recipes} onRecipeSelect={handleRecipeSelect} />
-      <SelectedRecipe recipe={selectedRecipe} />
+      </ol>
+      <RecipeModal />
     </div>
   );
 }

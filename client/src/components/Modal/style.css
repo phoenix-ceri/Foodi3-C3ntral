@@ -1,0 +1,53 @@
+.mainBtn {
+    position: relative;
+    justify-items: center;
+    padding: 0.8rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: green;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  
+  .mainBtn:hover {
+    background-color: lightgreen;
+  }
+  
+  .mainBtn:active {
+    background-color: blue;
+  }
+
+  .closeBtn:active {
+    background-color: red;
+  }
+
+  .displayModal {
+    font-size: 2rem;
+}
+
+.dropdown {
+    font-size: 2rem;
+}
+
+.dayOfWeek {
+    text-align: center;
+    width: 100%;
+    font-size: 5rem;
+}
+.recipe {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.modalBtn {
+    font-size: 2rem;
+}
+
+
+
+
+
+
