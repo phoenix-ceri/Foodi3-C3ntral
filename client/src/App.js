@@ -14,13 +14,8 @@ import SignUp from './pages/SignUpPage/SignUp';
 import ProfilePage from './pages/ProfilePage';
 import Search from './pages/RecipePage/searchRecipe';
 
-
-// import Profile from './pages/profile'
 // import Recipes from './pages/recipes'
 
-//Layout = Nav on Bottom
-//Layout1 = sideNav
-//Layout2 = Nav on top under Hero
 
 const httpLink = createHttpLink({
   uri: '/graphql',

@@ -16,12 +16,10 @@ const recipeDetailSchema = new Schema(
       required: true,
     },
     image: {
-      //have to double check what type this is
       type: String,
       required: false,
     },
     imageType: {
-      //have to double check what type this is
       type: String,
       required: true,
     },
@@ -41,21 +39,27 @@ const recipeDetailSchema = new Schema(
       type: Boolean,
       required: false,
     },
-    dishTypes: {
+    dishTypes: [
+      {
       //I'm not sure what type this should be because it is choices/an array?
       type: String,
-    },
-    extendedIngredients: {
-      //is this another subdocument? or just leave it as is and it will populate correctly? 
-      type: String,
-    },
-    summary: {
-      type: String,
-    },
-    winePairing: {
+    }
+  ],
+    extendedIngredients: [
+      {
       //is this another subdocument? or just leave it as is and it will populate correctly? 
       type: String,
     }
+  ],
+    summary: {
+      type: String,
+    },
+    winePairing: [
+      {
+      //is this another subdocument? or just leave it as is and it will populate correctly? 
+      type: String,
+    }
+  ]
   },
   {
     toJSON: {
