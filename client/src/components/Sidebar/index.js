@@ -11,11 +11,11 @@ function Sidebar() {
     function showSideNav() {
         if (Auth.loggedIn()) {
             return (
-                <div className='nav-bar'>
+                <div className='side-nav-bar'>
                     <Link className='logo' to='/'>
                         <img src={Logo} alt='Logo with black frame' />
                     </Link>
-                    <nav>
+                    <nav className='sidenav'>
                         <Link exact='true' activeclassname='active' to='/'>
                             <FontAwesomeIcon icon={faHome} color='#819863' />
                         </Link>
