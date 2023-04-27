@@ -9,10 +9,10 @@ const recipeSchema = new Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "RecipeDetails"
   },
-  ratings: {
+  ratings: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: "Rating"
-  },
+  }],
 });
 
 const Recipe = mongoose.model('Recipe', recipeSchema);

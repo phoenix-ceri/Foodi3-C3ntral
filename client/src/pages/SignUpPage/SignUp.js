@@ -10,8 +10,10 @@ const SignUp = () => {
     <div>
       <Hero />
       <SignupScreen />
-      <br/>
-      <BotBar />
+      <br />
+      <div className="fixed-bottom">
+        <BotBar />
+      </div>
     </div>
   );
 };

@@ -1,3 +1,8 @@
 body{
   background-color: #a69f8f;
 }
+.flexyboi{
+display: flex;
+justify-content: center;
+
+}

@@ -3,7 +3,6 @@ import { Container, Row, Col, Image } from 'react-bootstrap';
 import "./index.scss"
 
 function AboutTeamPage() {
-  alert('STOP');
   const teamMembers = [
     {
       name: 'Eva Perez',
@@ -24,7 +23,7 @@ function AboutTeamPage() {
       title: 'Co-Lead & Backend',
       image: 'https://media.discordapp.net/attachments/1068322599186202717/1098765554908676116/kelley-transformed.png?width=360&height=669',
       bio:
-        'Kelley is a highly motivated, creative, and personable Full-Stack Developer, who is always eager to grow and learn, based out of Central Florida.  She have experience in frontend languages such as HTML, CSS, CSS frameworks including Bootstrap and Tailwind, and JavaScript as well as back-end technologies such as Node.js, Express.js, jQuery, REACT, and databases including MySQL, MongoDB, and GraphQL. She loves to collaborate with like-minded individuals who are also looking to better the world around them through web development, such as her Foodie-Central teammates. Outside of the coding world, Kelley is a musician with a music degree in percussion, foodie, and fitness enthusiast. She also sings in a barbershop quartet.',
+        'Kelley is a highly motivated, creative, and personable Full-Stack Developer, who is always eager to grow and learn, based out of Central Florida.  She have experience in frontend languages such as HTML, CSS, CSS frameworks including Bootstrap and Tailwind, and JavaScript as well as back-end technologies such as Node.js, Express.js, jQuery, REACT, and databases including MySQL, MongoDB, and GraphQL. She loves to collaborate with like-minded individuals who are also looking to better the world around them through web development, such as her Foodie-Central teammates. Outside of the coding world, Kelley is a musician with a music degree in percussion, a foodie, and a fitness enthusiast. She also sings in a barbershop quartet.',
     },
     {
       name: 'Phoenix-Ceri Powell',

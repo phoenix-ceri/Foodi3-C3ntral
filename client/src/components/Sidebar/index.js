@@ -1,34 +1,98 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './index.scss';
-import Logo from '../../assets/images/svg/Logo-with-black-double-border.svg';
+import Logo from '../../assets/images/png/Logo-w-frame.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook, faUser, faHome, faHeartCircleCheck, faPeopleRoof } from '@fortawesome/free-solid-svg-icons';
 import '../../assets/fonts/fonts.css';
+import Auth from "../../utils/auth";
 
-const Sidebar = () => (
-    <div className='nav-bar'>
-        <Link className='logo' to='/'>
-            <img src={Logo} alt='Logo with black frame' />
-        </Link>
-        <nav>
-            <NavLink exact='true' activeclassname='active' to='/'>
-                <FontAwesomeIcon icon={faHome} color='#819863' />
-            </NavLink>
-            <NavLink exact='true' activeclassname='active' className='profile-link' to='/profile'>
+function Sidebar() {
+
+    function showSideNav() {
+        if (Auth.loggedIn()) {
+            return (
+                <div className='nav-bar'>
+                    <Link className='logo' to='/'>
+                        <img src={Logo} alt='Logo with black frame' />
+                    </Link>
+                    <nav>
+                        <Link exact='true' activeclassname='active' to='/'>
+                            <FontAwesomeIcon icon={faHome} color='#819863' />
+                        </Link>
+                        {/* <Link exact='true' activeclassname='active' className='profile-link' to='/profile'>
                 <FontAwesomeIcon icon={faUser} color='#819863' />
-            </NavLink>
-            <NavLink exact='true' activeclassname='active' className='recipes-link' to='/recipes'>
+            </Link> */}
+                        <Link exact='true' activeclassname='active' className='recipes-link' to='/search'>
 
-                <FontAwesomeIcon icon={faBook} color='#819863' />
-            </NavLink>
-            <NavLink exact='true' activeclassname='active' className='myPlans-Cart-link' to='/myMealPlanCart'>
-                <FontAwesomeIcon icon={faHeartCircleCheck} color='#819863' />
-            </NavLink>
-            <NavLink exact='true' activeclassname='active' className='about-us-link' to='/aboutUs'>
-                <FontAwesomeIcon icon={faPeopleRoof} color='#819863' />
-            </NavLink>
-        </nav>
-    </div>
-)
+                            <FontAwesomeIcon icon={faBook} color='#819863' />
+                        </Link>
+                        <Link exact='true' activeclassname='active' className='about-us-link' to='/about'>
+                            <FontAwesomeIcon icon={faPeopleRoof} color='#819863' />
+                        </Link>
+                        <a href="/" onClick={() => Auth.logout()}>
+                            Logout
+                        </a>
+                    </nav>
+                </div>
+            );
+        } else {
+            return (
+                <div className='nav-bar'>
+                    <Link className='logo' to='/'>
+                        <img src={Logo} alt='Logo with black frame' />
+                    </Link>
+                    <nav>
+                        <Link exact='true' activeclassname='active' to='/'>
+                            <FontAwesomeIcon icon={faHome} color='#819863' />
+                        </Link>
+                        {/* <Link exact='true' activeclassname='active' className='profile-link' to='/profile'>
+                        <FontAwesomeIcon icon={faUser} color='#819863' />
+                    </Link> */}
+                        <Link exact='true' activeclassname='active' className='recipes-link' to='/search'>
 
-export default Sidebar
+                            <FontAwesomeIcon icon={faBook} color='#819863' />
+                        </Link>
+                        <Link exact='true' activeclassname='active' className='about-us-link' to='/about'>
+                            <FontAwesomeIcon icon={faPeopleRoof} color='#819863' />
+                        </Link>
+                        <Link to="/signup">SignUp
+                        </Link>
+                        <Link to="/login">Login
+                        </Link>
+                    </nav>
+                </div>
+            );
+        }
+    }
+    return (
+        <div>
+            {showSideNav()}
+        </div>
+    );
+}
+
+//old sidebar code
+//   const Sidebar = () => (
+//     <div className='nav-bar'>
+//         <Link className='logo' to='/'>
+//             <img src={Logo} alt='Logo with black frame' />
+//         </Link>
+//         <nav>
+//             <Link exact='true' activeclassname='active' to='/'>
+//                 <FontAwesomeIcon icon={faHome} color='#819863' />
+//             </Link>
+//             {/* <Link exact='true' activeclassname='active' className='profile-link' to='/profile'>
+//                 <FontAwesomeIcon icon={faUser} color='#819863' />
+//             </Link> */}
+//             <Link exact='true' activeclassname='active' className='recipes-link' to='/search'>
+
+//                 <FontAwesomeIcon icon={faBook} color='#819863' />
+//             </Link>
+//             <Link exact='true' activeclassname='active' className='about-us-link' to='/about'>
+//                 <FontAwesomeIcon icon={faPeopleRoof} color='#819863' />
+//             </Link>
+//         </nav>
+//     </div>
+// )
+
+export default Sidebar;

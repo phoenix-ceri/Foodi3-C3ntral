@@ -7,8 +7,9 @@ function Profile() {
 
   return (
     <div>
-      <SideBar bg="light" expand="lg" sticky="top"/> 
-            <Calendar />
+      <Calendar />
+      <SideBar bg="light" expand="lg" sticky="top" />
+
     </div>
   );
 }

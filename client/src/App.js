@@ -12,20 +12,10 @@ import LoginPage from './pages/LoginPage/Login';
 import AboutPage from './pages/AboutPage/AboutPage';
 import SignUp from './pages/SignUpPage/SignUp';
 import ProfilePage from './pages/ProfilePage';
+import Search from './pages/RecipePage/searchRecipe';
 
-// import SearchPage from './pages/RecipePage/searchRecipe';
-
-// import BotNavLayout from './pages/BotNavLayout'
-// import SideNavLayout from './pages/SideNavLayout'
-// import TopNavLayout from './pages/TopNavLayout'
-// import Profile from './pages/profile'
 // import Recipes from './pages/recipes'
-// import MealPlans from './pages/myMealPlanCart'
-// import Login from './components/Login/Login'
 
-//Layout = Nav on Bottom
-//Layout1 = sideNav
-//Layout2 = Nav on top under Hero
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -59,6 +49,8 @@ function App() {
             <Route path="/about" element={<AboutPage />}>
             </Route>
             <Route path="/signup" element={<SignUp />}>
+            </Route>
+            <Route path="/search" element={<Search />}>
             </Route>
             {/* <Route path="/search" element={<SearchPage />}>
             </Route> */}

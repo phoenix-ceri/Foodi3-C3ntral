@@ -62,6 +62,27 @@ const resolvers = {
       }
 
     },
+    //can make the below two resolvers all in one
+    //saves API recipe information to our MongoDB
+    addRecipeDetails: async (parent, args, context) => {
+      try { 
+        const addDetails = await RecipeDetails.create(args)
+        return addDetails;
+      } catch (err) {
+        console.log(err);
+        throw new AuthenticationError('You need to be logged in!');
+      }
+    },
+    //adding a recipe to the meal plan
+   addRecipe: async (parent, args, context) => {
+      try {
+        const recipe = await Recipe.create(args)
+        return recipe;
+      } catch (err) {
+        console.log(err);
+        throw new AuthenticationError('You need to be logged in!');
+      }
+   },
     removeRecipes: async (parent, args, context) => {
       const updatedUser = await User.findOneAndUpdate(
         { _id: context.user._id },

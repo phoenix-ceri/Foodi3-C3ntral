@@ -3,15 +3,17 @@ import Hero from "../../components/Hero";
 import Login from "../../components/Login";
 import BotBar from "../../components/BotBar";
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import "./Login.css"
+import "./Login.scss"
 
 const LoginPage = () => {
   return (
-    <div>
+    <div >
       <Hero />
       <Login />
-      <br />
-      <BotBar />
+      <div className="fixed-bottom">
+
+        <BotBar />
+      </div>
     </div>
   );
 };

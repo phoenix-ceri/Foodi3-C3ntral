@@ -1,14 +1,14 @@
 import React from "react";
 import Search from "../../components/Recipes/recipeSearch";
-import HeroImage from "../../components/Hero/index";
-import Sidebar from "../../components/Sidebar";
+import HeroImage from "../../components/Hero";
+import Sidebar from "../../components/SideBar";
 
 const SearchPage = () => {
     return (
         <div>
-            <HeroImage/>
+            <HeroImage />
             <Search />
-            <Sidebar/>
+            <Sidebar />
         </div>
     )
 }
