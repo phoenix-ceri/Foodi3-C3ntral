@@ -24,6 +24,14 @@ export const ADD_RECIPE = gql`
   }
 `;
 
+export const ADD_RECIPE_DETAILS = gql`
+  mutation addRecipeDetails($recipeDetails: [ID]!, $spoonId: Int!, $title: String!, $image: String, $imageType: String!, $servings: Int, $readyInMinutes: Int, $spoonacularSourceUrl: String, $pricePerServing: Int, $cheap: Boolean, $dishTypes: String, $extendedIngredients: String, $summary: String, $winePairing: String) {
+    addRecipeDetails(recipes: $recipes) {
+      _id
+    }
+  }
+`;
+
 export const REMOVE_RECIPE = gql`
 mutation RemoveRecipe($recipeId: String!) {
     RemoveRecipe(recipeID: $recipeId) {

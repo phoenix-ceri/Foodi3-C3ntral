@@ -62,6 +62,24 @@ const resolvers = {
       }
 
     },
+    addRecipeDetails: async (parent, args, context) => {
+      try { 
+        const addDetails = await RecipeDetails.create(args)
+        return addDetails;
+      } catch (err) {
+        console.log(err);
+        throw new AuthenticationError('You need to be logged in!');
+      }
+    },
+   addRecipe: async (parent, args, context) => {
+      try {
+        const recipe = await Recipe.create(args)
+        return recipe;
+      } catch (err) {
+        console.log(err);
+        throw new AuthenticationError('You need to be logged in!');
+      }
+   },
     removeRecipes: async (parent, args, context) => {
       const updatedUser = await User.findOneAndUpdate(
         { _id: context.user._id },

@@ -26,6 +26,8 @@ const userSchema = new Schema({
     minlength: 5
   },
   mealPlans: [MealPlan.schema],
+  //may be better to do an array of ids instead of the nested subdocument, 
+  
   // friends: [
   //   {
   //     type: Schema.Types.ObjectId,
