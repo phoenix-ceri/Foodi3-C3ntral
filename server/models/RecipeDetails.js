@@ -42,19 +42,19 @@ const recipeDetailSchema = new Schema(
       required: false,
     },
     dishTypes: {
-      //I'm not sure what type this should be becuase it is choices/an array?
-      type: Array,
+      //I'm not sure what type this should be because it is choices/an array?
+      type: String,
     },
     extendedIngredients: {
       //is this another subdocument? or just leave it as is and it will populate correctly? 
-      type: Array,
+      type: String,
     },
     summary: {
       type: String,
     },
     winePairing: {
       //is this another subdocument? or just leave it as is and it will populate correctly? 
-      type: Array,
+      type: String,
     }
   },
   {

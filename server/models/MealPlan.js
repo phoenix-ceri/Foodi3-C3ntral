@@ -22,6 +22,7 @@ const mealPlanSchema = new Schema({
       type: Schema.Types.ObjectId,
       ref: 'Recipe'
     }
+    //may want to change this to 'recipe' singular in order to have one recipe per slot/position instead of multiple - something to consider
   ]
 });
 
