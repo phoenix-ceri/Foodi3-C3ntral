@@ -65,7 +65,7 @@ const Search = () => {
     };
 
     return (
-        <div className="container">
+        <div className="recipeSearch-container">
             <h1>Recipe Search</h1>
             <form onSubmit={handleSubmit}>
                 <div className="search">

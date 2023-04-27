@@ -33,7 +33,7 @@ const SignupScreen = (props) => {
 
   return (
     <div className="signup-screen">
-      <Container>
+      <Container className="botNav-container">
         <Row>
           <Col md={{ span: 6, offset: 3 }} className="signup-screen-form">
             <h2 className="mb-3">Sign up</h2>

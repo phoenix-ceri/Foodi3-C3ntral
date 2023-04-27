@@ -8,7 +8,7 @@ function Profile() {
   return (
     <div>
       <Calendar />
-      <SideBar bg="light" expand="lg" sticky="top" />
+      <SideBar />
 
     </div>
   );

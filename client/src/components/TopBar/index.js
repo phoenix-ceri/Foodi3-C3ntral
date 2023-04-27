@@ -9,43 +9,43 @@ function TopNav() {
     if (Auth.loggedIn()) {
       return (
         <div>
-      <Navbar bg="light" expand="lg" sticky="top">
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="m-auto">
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/search">Recipes</Link>
-            <a href="/" onClick={() => Auth.logout()}>
-              Logout
-            </a>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    </div>
+          <Navbar bg="light" expand="lg" sticky="top" className='topNavStyle'>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="m-auto">
+                <Link to="/">Home</Link>
+                <Link to="/about">About</Link>
+                <Link to="/search">Recipes</Link>
+                <a href="/" onClick={() => Auth.logout()}>
+                  Logout
+                </a>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+        </div>
       );
     } else {
       return (
         <div>
-        <Navbar bg="light" expand="lg" sticky="top">
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="m-auto">
-              <Link to="/">Home</Link>
-              <Link to="/about">About</Link>
-              <Link to="/search">Recipes</Link>
-              <Link to="/signup">SignUp</Link>
-              <Link to="/login">Login</Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-      </div>
+          <Navbar bg="light" expand="lg" sticky="top">
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="m-auto">
+                <Link to="/">Home</Link>
+                <Link to="/about">About</Link>
+                <Link to="/search">Recipes</Link>
+                <Link to="/signup">SignUp</Link>
+                <Link to="/login">Login</Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+        </div>
       )
     }
   }
   return (
     <div>
-    {showTopNav()}
+      {showTopNav()}
     </div>
   );
 }
