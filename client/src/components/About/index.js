@@ -35,7 +35,7 @@ function AboutTeamPage() {
   ];
 
   return (
-    <Container>
+    <Container className='bios'>
       <h1>About the Team</h1>
       <Row>
         {teamMembers.map((member, index) => (
