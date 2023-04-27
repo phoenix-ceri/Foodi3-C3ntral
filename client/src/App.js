@@ -13,6 +13,8 @@ import AboutPage from './pages/AboutPage/AboutPage';
 import SignUp from './pages/SignUpPage/SignUp';
 import ProfilePage from './pages/ProfilePage';
 import Search from './pages/RecipePage/searchRecipe';
+import Selected from './pages/RecipePage/selectRecipe';
+
 
 // import Recipes from './pages/recipes'
 
@@ -51,6 +53,8 @@ function App() {
             <Route path="/signup" element={<SignUp />}>
             </Route>
             <Route path="/search" element={<Search />}>
+            </Route>
+            <Route path="/recipe" element={<Selected />}>
             </Route>
             {/* <Route path="/search" element={<SearchPage />}>
             </Route> */}
