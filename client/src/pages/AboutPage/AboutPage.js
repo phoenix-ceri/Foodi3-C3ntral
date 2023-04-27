@@ -11,9 +11,9 @@ const AboutPage = () => {
     <div>
       <Hero />
       <TopBar />
+<div className="flexyboi">
       <AboutTeamPage />
-
-      <RecipeSearch />
+      </div>
     </div>
   );
 };
