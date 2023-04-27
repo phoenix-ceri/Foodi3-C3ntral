@@ -107,6 +107,20 @@
         }
     }
 
+    a.sign-up-link {
+        &:after {
+            content: 'SIGN IN';
+            color: black;
+        }
+    }
+
+    a.login-link {
+        &:after {
+            content: 'LOG IN';
+            color: black;
+        }
+    }
+
     a.active {
         svg {
             color: black;

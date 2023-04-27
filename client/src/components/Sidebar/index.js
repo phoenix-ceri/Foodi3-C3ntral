@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import './index.scss';
 import Logo from '../../assets/images/png/Logo-w-frame.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook, faUser, faHome, faHeartCircleCheck, faPeopleRoof } from '@fortawesome/free-solid-svg-icons';
+import { faBook, faHome, faCircleUser, faPeopleRoof, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import '../../assets/fonts/fonts.css';
 import Auth from "../../utils/auth";
 
@@ -55,9 +55,11 @@ function Sidebar() {
                         <Link exact='true' activeclassname='active' className='about-us-link' to='/about'>
                             <FontAwesomeIcon icon={faPeopleRoof} color='#819863' />
                         </Link>
-                        <Link to="/signup">SignUp
+                        <Link exact='true' activeclassname='active' className='sign-up-link' to='/signup'>
+                            <FontAwesomeIcon icon={faUserPlus} color='#819863' />
                         </Link>
-                        <Link to="/login">Login
+                        <Link exact='true' activeclassname='active' className='login-link' to='/login'>
+                            <FontAwesomeIcon icon={faCircleUser} color='#819863' />
                         </Link>
                     </nav>
                 </div>
