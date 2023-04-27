@@ -11,6 +11,8 @@ export const LOGIN = gql`
   }
 `;
 
+//can make the below two resolvers all in one
+//should be adding recipe to meal plan
 export const ADD_RECIPE = gql`
   mutation addRecipe($recipes: [ID]!) {
     addRecipe(recipes: $recipes) {

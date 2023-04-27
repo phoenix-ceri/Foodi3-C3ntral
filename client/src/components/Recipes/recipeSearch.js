@@ -42,7 +42,7 @@ const Search = () => {
         setQuery('');
     };
 
-    //saving the recipe, identifier will change depending on whether id or name
+    //saving the recipe, identifier will change depending on whether id or name(title)
     const handleRecipeClick = async (e) => {
         const identifier = e.target.textContent;
         const recipeToSave = recipes.find(recipe => {
@@ -57,7 +57,8 @@ const Search = () => {
                 }
             })
             console.log(data)
-            //addRecipe and save the ID that you get from {data} to the recipe and whatever other information it needs, needs to link to user/mealplan. Combining recipedetails/recipe and adding the rating to the combined model. Just move the rating from the recipe model to the recipedetails model (could cut out an extra step)
+            //addRecipe and save the ID that you get from {data} to the recipe and whatever other information it needs, needs to link to user/mealplan. 
+            // Combining recipedetails/recipe and adding the rating to the combined model. Just move the rating from the recipe model to the recipedetails model (could cut out an extra step)
         } catch (err) {
             console.log(err);
         }

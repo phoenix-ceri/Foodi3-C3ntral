@@ -62,6 +62,8 @@ const resolvers = {
       }
 
     },
+    //can make the below two resolvers all in one
+    //saves API recipe information to our MongoDB
     addRecipeDetails: async (parent, args, context) => {
       try { 
         const addDetails = await RecipeDetails.create(args)
@@ -71,6 +73,7 @@ const resolvers = {
         throw new AuthenticationError('You need to be logged in!');
       }
     },
+    //adding a recipe to the meal plan
    addRecipe: async (parent, args, context) => {
       try {
         const recipe = await Recipe.create(args)
