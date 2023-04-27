@@ -7,8 +7,8 @@ const Footer = () => {
   const location = useLocation();
   const navigate = useNavigate();
   return (
-    <footer className="w-100 mt-auto bg-secondary p-4">
-      <div className="container text-center mb-5">
+    <footer className="w-100 p-0 bg-black fixed-bottom justify-content-center footer">
+      <div className="container px-5 mx-auto text-center">
         {location.pathname !== '/' && (
           <button
             className="btn btn-dark mb-3"
@@ -17,7 +17,7 @@ const Footer = () => {
             &larr; Go Back
           </button>
         )}
-        <h4>
+        <p className='.fs-6 text fw-bolder m-0'>
           Made with{' '}
           <span
             className="emoji"
@@ -28,7 +28,7 @@ const Footer = () => {
             ❤️
           </span>{' '}
           by the Foodi3 C3ntral team.
-        </h4>
+        </p>
       </div>
     </footer>
   );

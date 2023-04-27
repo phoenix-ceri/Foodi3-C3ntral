@@ -1,5 +1,5 @@
 import React from 'react';
-import SideBar from '../SideBar';
+import SideBar from '../Sidebar';
 import Calendar from '../Calendar';
 
 
@@ -7,8 +7,9 @@ function Profile() {
 
   return (
     <div>
-      <SideBar bg="light" expand="lg" sticky="top"/> 
-            <Calendar />
+      <Calendar />
+      <SideBar bg="light" expand="lg" sticky="top" />
+
     </div>
   );
 }

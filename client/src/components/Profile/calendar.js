@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
+import './index.scss';
 
 function MealPlanCalendar() {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -21,7 +21,7 @@ function MealPlanCalendar() {
   };
 
   return (
-    <div>
+    <div className='calendar-container'>
       <Calendar value={selectedDate} onChange={setSelectedDate} />
       <form onSubmit={handleAddMeal}>
         <label>
