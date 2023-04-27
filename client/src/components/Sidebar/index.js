@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './index.scss';
 import Logo from '../../assets/images/png/Logo-w-frame.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,19 +11,19 @@ const Sidebar = () => (
             <img src={Logo} alt='Logo with black frame' />
         </Link>
         <nav>
-            <NavLink exact='true' activeclassname='active' to='/'>
+            <Link exact='true' activeclassname='active' to='/'>
                 <FontAwesomeIcon icon={faHome} color='#819863' />
-            </NavLink>
-            <NavLink exact='true' activeclassname='active' className='profile-link' to='/profile'>
+            </Link>
+            {/* <Link exact='true' activeclassname='active' className='profile-link' to='/profile'>
                 <FontAwesomeIcon icon={faUser} color='#819863' />
-            </NavLink>
-            <NavLink exact='true' activeclassname='active' className='recipes-link' to='/recipes'>
+            </Link> */}
+            <Link exact='true' activeclassname='active' className='recipes-link' to='/search'>
 
                 <FontAwesomeIcon icon={faBook} color='#819863' />
-            </NavLink>
-            <NavLink exact='true' activeclassname='active' className='about-us-link' to='/aboutUs'>
+            </Link>
+            <Link exact='true' activeclassname='active' className='about-us-link' to='/about'>
                 <FontAwesomeIcon icon={faPeopleRoof} color='#819863' />
-            </NavLink>
+            </Link>
         </nav>
     </div>
 )

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function TopNav() {
   return (
@@ -8,10 +9,9 @@ function TopNav() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
-            <Nav.Link href="#home">Recipes</Nav.Link>
-            <Nav.Link href="#link">My Plans</Nav.Link>
-            <Nav.Link href="#about">Meal Plans</Nav.Link>
-            <Nav.Link href="#contact">About Us</Nav.Link>
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/search">Recipes</Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
