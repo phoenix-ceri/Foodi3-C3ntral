@@ -15,6 +15,11 @@ const userSchema = new Schema({
     required: true,
     trim: true
   },
+  username: {
+    type: String,
+    required: true,
+    unique: true
+  },
   email: {
     type: String,
     required: true,
@@ -27,7 +32,7 @@ const userSchema = new Schema({
   },
   mealPlans: [MealPlan.schema],
   //may be better to do an array of ids instead of the nested subdocument, 
-  
+
   // friends: [
   //   {
   //     type: Schema.Types.ObjectId,
