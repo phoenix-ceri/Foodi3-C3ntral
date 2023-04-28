@@ -46,6 +46,7 @@ const Search = () => {
     const handleRecipeClick = async (e) => {
         const identifier = e.target.textContent;
         const recipeToSave = recipes.find(recipe => {
+            console.log(recipe)
             return recipe.title === identifier
         })
         try {
@@ -65,7 +66,7 @@ const Search = () => {
     };
 
     return (
-        <div className="container">
+        <div className="recipeSearch-container">
             <h1>Recipe Search</h1>
             <form onSubmit={handleSubmit}>
                 <div className="search">

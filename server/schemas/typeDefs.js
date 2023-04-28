@@ -66,7 +66,7 @@ const typeDefs = gql`
     addToMealPlan(_id: ID!, slot: Int!, position: Int!): MealPlan
     login(email: String!, password: String!): Auth
     addRecipeDetails(recipeDetails: [ID]!,spoonId: Int!,title: String!,image: String,imageType: String!,servings: Int, readyInMinutes: Int, spoonacularSourceUrl: String, pricePerServing: Int, cheap: Boolean, dishTypes: String, extendedIngredients: String, summary: String, winePairing: String): RecipeDetails
-    addRecipe($recipes: [ID]!): Recipe
+    addRecipe(recipes: [ID]!): Recipe
   }
 `;
 

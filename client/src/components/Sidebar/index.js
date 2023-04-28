@@ -6,12 +6,12 @@ import { faBook, faHome, faCircleUser, faPeopleRoof, faUserPlus } from '@fortawe
 import '../../assets/fonts/fonts.css';
 import Auth from "../../utils/auth";
 
-function Sidebar() {
+function SideBar() {
 
     function showSideNav() {
         if (Auth.loggedIn()) {
             return (
-                <div className='side-nav-bar'>
+                <div className='side-navbar'>
                     <Link className='logo' to='/'>
                         <img src={Logo} alt='Logo with black frame' />
                     </Link>
@@ -97,4 +97,4 @@ function Sidebar() {
 //     </div>
 // )
 
-export default Sidebar;
+export default SideBar;
