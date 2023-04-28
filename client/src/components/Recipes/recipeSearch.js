@@ -46,6 +46,7 @@ const Search = () => {
     const handleRecipeClick = async (e) => {
         const identifier = e.target.textContent;
         const recipeToSave = recipes.find(recipe => {
+            console.log(recipe)
             return recipe.title === identifier
         })
         try {
