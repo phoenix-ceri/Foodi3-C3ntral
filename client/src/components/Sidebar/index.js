@@ -97,4 +97,4 @@ function Sidebar() {
 //     </div>
 // )
 
-export default Sidebar;
+export default SideBar;
