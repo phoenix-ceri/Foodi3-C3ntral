@@ -17,17 +17,17 @@ function SideBar() {
                     </Link>
                     <nav className="sidenav">
                         <Link exact='true' activeclassname='active' to='/'>
-                            <FontAwesomeIcon icon={faHome} size="xl" color='#883D1A' />
+                            <FontAwesomeIcon icon={faHome} size="xl" color='#000000' />
                         </Link>
                         {/* <Link exact='true' activeclassname='active' className='profile-link' to='/profile'>
                 <FontAwesomeIcon icon={faUser} color='#819863' />
             </Link> */}
                         <Link exact='true' activeclassname='active' className='recipes-link' to='/search'>
 
-                            <FontAwesomeIcon icon={faBook} size="xl" color='#883D1A' />
+                            <FontAwesomeIcon icon={faBook} size="xl" color='##000000' />
                         </Link>
                         <Link exact='true' activeclassname='active' className='about-us-link' to='/about'>
-                            <FontAwesomeIcon icon={faPeopleRoof} size="xl" color='#883D1A' />
+                            <FontAwesomeIcon icon={faPeopleRoof} size="xl" color='#000000' />
                         </Link>
                         <a href="/" onClick={() => Auth.logout()}>
                             Logout
@@ -43,23 +43,23 @@ function SideBar() {
                     </Link>
                     <nav className="sidenav">
                         <Link exact='true' activeclassname='active' to='/'>
-                            <FontAwesomeIcon icon={faHome} size="xl" color='#883D1A' />
+                            <FontAwesomeIcon icon={faHome} size="xl" color='#000000' />
                         </Link>
                         {/* <Link exact='true' activeclassname='active' className='profile-link' to='/profile'>
                         <FontAwesomeIcon icon={faUser} color='#819863' />
                     </Link> */}
                         <Link exact='true' activeclassname='active' className='recipes-link' to='/search'>
 
-                            <FontAwesomeIcon icon={faBook} size="xl" color='#883D1A' />
+                            <FontAwesomeIcon icon={faBook} size="xl" color='#000000' />
                         </Link>
                         <Link exact='true' activeclassname='active' className='about-us-link' to='/about'>
-                            <FontAwesomeIcon icon={faPeopleRoof} size="xl" color='#883D1A' />
+                            <FontAwesomeIcon icon={faPeopleRoof} size="xl" color='#000000' />
                         </Link>
                         <Link exact='true' activeclassname='active' className='sign-up-link' to='/signup'>
-                            <FontAwesomeIcon icon={faUserPlus} size="xl" color='#883D1A' />
+                            <FontAwesomeIcon icon={faUserPlus} size="xl" color='#000000' />
                         </Link>
                         <Link exact='true' activeclassname='active' className='login-link' to='/login'>
-                            <FontAwesomeIcon icon={faCircleUser} size="xl" color='#883D1A' />
+                            <FontAwesomeIcon icon={faCircleUser} size="xl" color='#000000' />
                         </Link>
                     </nav>
                 </div>

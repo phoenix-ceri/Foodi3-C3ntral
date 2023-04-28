@@ -1,8 +1,9 @@
 @import '../../assets/fonts/fonts.css';
 
-.aboutimg img{
-    max-height: 200px;
-    max-width: 200px;
+.aboutimg img {
+    border-width: 15px;
+    border-color: #000000;
+    border-style: double;
 }
 
 .bios{

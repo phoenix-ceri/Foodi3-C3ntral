@@ -47,7 +47,7 @@
         }
 
         &:hover {
-            color:#95B380;
+            color:#000000;
 
             svg {
                 opacity: 0;
@@ -127,4 +127,15 @@
         }
     }
 }
-// the trash queen smells good garbage
+
+@media only screen and (max-width: 768px) {
+    .side-navbar {
+        visibility: hidden;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .side-navbar {
+        visibility: hidden;
+    }
+  }
