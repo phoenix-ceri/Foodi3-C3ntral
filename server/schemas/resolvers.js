@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Recipe } = require('../models');
+const { User, RecipeDetails, MealPlan } = require('../models');
 const { signToken } = require('../utils/auth');
 
 
@@ -7,19 +7,11 @@ const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    getAllRecipes: async () => {
-      const recipes = await Recipe.find();
-      return recipes;
-    },
-    getSingleRecipe:
-      async () => {
-        const singleRecipe = await Recipe.find();
-        return singleRecipe;
-      },
-    getComments:
-      async () => {
-        const comments = await Rating.find();
-        return comments;
+    getUser:
+      async (_, args) => {
+        const userSimple = await User.findById(args._id).
+          populate({ path: "mealPlans", model: "MealPlan", populate: { path: "recipes", model: "RecipeDetails" } })
+        return userSimple;
       }
   },
 
@@ -65,7 +57,7 @@ const resolvers = {
     //can make the below two resolvers all in one
     //saves API recipe information to our MongoDB
     addRecipeDetails: async (parent, args, context) => {
-      try { 
+      try {
         const addDetails = await RecipeDetails.create(args)
         return addDetails;
       } catch (err) {
@@ -74,15 +66,6 @@ const resolvers = {
       }
     },
     //adding a recipe to the meal plan
-   addRecipe: async (parent, args, context) => {
-      try {
-        const recipe = await Recipe.create(args)
-        return recipe;
-      } catch (err) {
-        console.log(err);
-        throw new AuthenticationError('You need to be logged in!');
-      }
-   },
     removeRecipes: async (parent, args, context) => {
       const updatedUser = await User.findOneAndUpdate(
         { _id: context.user._id },

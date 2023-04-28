@@ -3,16 +3,10 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
 
   type Rating {
-    value: Int
-    commentBody: String
-    username: String
+    stars: Int!
+    commentBody: String!
+    user: User
     createdAt: String
-  }
-
-  type Recipe {
-    _id: ID
-    spoonRecipe: [RecipeDetails]
-    ratings: [Rating]
   }
 
   type RecipeDetails {
@@ -30,6 +24,7 @@ const typeDefs = gql`
     extendedIngredients: [String]
     summary: String
     winePairing: [String]
+    rating: [Rating]
   }
 
   type MealPlan {
@@ -37,16 +32,17 @@ const typeDefs = gql`
     creationDate: String
     slot: Int!
     position: Int!
-    recipes: [Recipe]
+    recipes: [RecipeDetails]
   }
 
   type User {
     _id: ID
-    firstName: String
-    lastName: String
-    email: String
+    firstName: String!
+    lastName: String!
+    username: String!
+    email: String!
     mealPlans: [MealPlan]
-    recipes: [Recipe]
+    recipes: [RecipeDetails]
   }
 
   type Auth {
@@ -55,18 +51,16 @@ const typeDefs = gql`
   }
 
   type Query {
-    getAllRecipes: [Recipe]
-    getSingleRecipe: [Recipe]
-    getComments: [Rating]
+    getUser: User
   }
 
   type Mutation {
-    addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
-    removeRecipes(recipes: [ID]!): MealPlan
-    addToMealPlan(_id: ID!, slot: Int!, position: Int!): MealPlan
+    addUser(firstName: String!, lastName: String!, username:String!, email: String!, password: String!): Auth
+    removeRecipes(RecipeDetails: [ID]!): MealPlan
+    addToMealPlan(spoonId: Int!, slot: Int!, position: Int!): MealPlan
     login(email: String!, password: String!): Auth
-    addRecipeDetails(recipeDetails: [ID]!,spoonId: Int!,title: String!,image: String,imageType: String!,servings: Int, readyInMinutes: Int, spoonacularSourceUrl: String, pricePerServing: Int, cheap: Boolean, dishTypes: String, extendedIngredients: String, summary: String, winePairing: String): RecipeDetails
-    addRecipe(recipes: [ID]!): Recipe
+    addRecipeDetails(RecipeDetails: [ID]!,spoonId: Int!,title: String!,image: String,imageType: String!,servings: Int, readyInMinutes: Int, spoonacularSourceUrl: String, pricePerServing: Int, cheap: Boolean, dishTypes: String, extendedIngredients: String, summary: String, winePairing: String): RecipeDetails
+    addRating(stars: Int!, commentBody: String!, username: String!): RecipeDetails
   }
 `;
 
