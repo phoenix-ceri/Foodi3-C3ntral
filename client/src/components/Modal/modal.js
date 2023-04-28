@@ -6,11 +6,11 @@ import Row from 'react-bootstrap/Row';
 import DaysOfWeekDropdown from "./dayOfTheWeek";
 import MealTypeDropDown from  "./mealType";
 import Modal from 'react-modal';
-import './styl.css'
+import './style.css'
 
 
 
-const RecipoeModal = () => {
+const RecipeModal = () => {
   const [selectedDay, setSelectedDay] = useState("");
   const [selectedMealType, setSelectedMealType] = useState("");
   const [savedSelections, setSavedSelections] = useState([]);
@@ -86,4 +86,4 @@ const RecipoeModal = () => {
   );
 };
 
-export default RecipoeModal;
+export default RecipeModal;
