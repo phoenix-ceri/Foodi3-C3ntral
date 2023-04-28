@@ -57,9 +57,9 @@ const RecipeModal = () => {
        <Button  variant="success" className="displayModal btn btn-primary" onClick={openModal}>Add Recipe to Calendar</Button>
        </div>
        <div className="Modal">
-        <Modal isOpen={modalIsOpen}onRequestClose={closeModal} 
+        <Modal className={'modal-overlay'} isOpen={modalIsOpen}onRequestClose={closeModal} 
         contentLabel="Example Modal" >
-          <Form onSubmit={handleFormSubmit}>
+          <Form className="modal-content" onSubmit={handleFormSubmit}>
             <Row>
             <Col>
                 <DaysOfWeekDropdown value={selectedDay} onChange={handleDayChange} />

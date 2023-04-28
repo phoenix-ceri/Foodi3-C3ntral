@@ -1,0 +1,45 @@
+@import '../../assets/fonts/fonts.css';
+
+.welcome-container {
+  border: 10px double black;
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .welcome-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .welcome-container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.welcome-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.welcome-description{
+  font-family: 'Roboto Slab', serif;
+}
+
+@media (min-width: 768px) {
+  .welcome-title {
+    margin-bottom: 40px;
+  }
+}
+
+.welcome-description {
+  margin-top: 0;
+}

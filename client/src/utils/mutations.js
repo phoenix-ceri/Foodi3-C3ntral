@@ -65,4 +65,28 @@ export const ADD_USER = gql`
   }
 `;
 
+export const ADD_RATING = gql`
+  mutation addRaiting($stars: Int!) {
+    addRaiting($stars: Int!) {
+      creationDate
+      _id
+      commentBody
+      user {
+        _id
+        name
+      }
+      recipe {
+        _id
+        name
+    }
+  }
+}
+`;
+
+export const REMOVE_RATING = gql`
+mutation RemoveRaiting($id: ID!) {
+    RemoveRating(ID!: $id) 
+}
+`;
+
 
