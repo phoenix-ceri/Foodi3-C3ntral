@@ -31,7 +31,7 @@ const SignupScreen = (props) => {
       ...formState,
       [name]: value,
     });
-  };
+  }; 
 
   return (
     <div className="signup-screen">
@@ -107,6 +107,6 @@ const SignupScreen = (props) => {
       </Container>
     </div>
   );
-};
+}
 
 export default SignupScreen;
