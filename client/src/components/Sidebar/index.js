@@ -1,21 +1,21 @@
 import { Link } from 'react-router-dom';
-import './index.scss';
 import Logo from '../../assets/images/png/Logo-w-frame.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook, faHome, faCircleUser, faPeopleRoof, faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import '../../assets/fonts/fonts.css';
 import Auth from "../../utils/auth";
+import './side.scss';
 
 function SideBar() {
 
     function showSideNav() {
         if (Auth.loggedIn()) {
             return (
-                <div className='side-navbar'>
+                <div className="side-navbar">
                     <Link className='logo' to='/'>
                         <img src={Logo} alt='Logo with black frame' />
                     </Link>
-                    <nav className='sidenav'>
+                    <nav className="sidenav">
                         <Link exact='true' activeclassname='active' to='/'>
                             <FontAwesomeIcon icon={faHome} color='#819863' />
                         </Link>
@@ -37,11 +37,11 @@ function SideBar() {
             );
         } else {
             return (
-                <div className='nav-bar'>
+                <div className="side-navbar">
                     <Link className='logo' to='/'>
                         <img src={Logo} alt='Logo with black frame' />
                     </Link>
-                    <nav>
+                    <nav className="sidenav">
                         <Link exact='true' activeclassname='active' to='/'>
                             <FontAwesomeIcon icon={faHome} color='#819863' />
                         </Link>

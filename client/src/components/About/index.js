@@ -16,7 +16,7 @@ function AboutTeamPage() {
       title: 'Front End Engineer',
       image: 'https://media.discordapp.net/attachments/1068322599186202717/1098765554233376889/jeff-NeuOCDVAs-transformed.png?width=534&height=671',
       bio:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac metus eget velit suscipit commodo a sed nulla.',
+        'Jeff is a nose diving, creative Full-Stack Developer, who enjoys learning. He is based in South Florida. He currently works as an Analyst for a renewable energy company. Throughout the course he has learned several frontend languages such as HTML, CSS, REACT, JavaScript and frameworks such as Bootstrap and Tailwind. On the backend side he has learned Node.js, jQuery, REACT and GraphQL. Outside of coding Jeff enjoys coaching youth football.',
     },
     {
       name: 'Kelley Flinn',

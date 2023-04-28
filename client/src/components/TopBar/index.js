@@ -36,12 +36,12 @@ function TopNav() {
           <Navbar bg="light" expand="lg" sticky="top">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="m-auto">
-                <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
-                <Link to="/search">Recipes</Link>
-                <Link to="/signup">SignUp</Link>
-                <Link to="/login">Login</Link>
+              <Nav className="m-auto my-nav-links">
+                <Link className='my-nav-link' to="/">Home</Link>
+                <Link className='my-nav-link' to="/about">About</Link>
+                <Link className='my-nav-link' to="/search">Recipes</Link>
+                <Link className='my-nav-link' to="/signup">SignUp</Link>
+                <Link className='my-nav-link' to="/login">Login</Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
