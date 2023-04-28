@@ -1,5 +1,5 @@
 import React from "react";
-import Profile from "../../components/Profile/profile";
+import Profile from "../../components/Profile/profile.js";
 import Footer from '../../components/Footer';
 // import CommentForm from '../../components/Comments/add';
 // import RenderComment from '../../components/Comments/render';
