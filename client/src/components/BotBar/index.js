@@ -10,7 +10,7 @@ function BottomNavbar() {
       return (
         <Navbar bg="dark" variant="dark" className='botnav'>
         <Nav className="mx-auto pb-5 mb-5">
-          <Link to="/">Home</Link>
+          <Link to="/profile">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/search">Recipes</Link>
           <a href="/" onClick={() => Auth.logout()}>
