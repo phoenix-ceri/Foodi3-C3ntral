@@ -1,53 +1,134 @@
 .mainBtn {
-    position: relative;
-    justify-items: center;
-    padding: 0.8rem 2rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    color: #fff;
-    background-color: green;
-    border: none;
-    border-radius: 1rem;
-    cursor: pointer;
-  }
-  
-  .mainBtn:hover {
-    background-color: lightgreen;
-  }
-  
-  .mainBtn:active {
-    background-color: blue;
-  }
+  position: relative;
+  justify-items: center;
+  padding: 0.8rem 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: green;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
 
-  .closeBtn:active {
-    background-color: red;
-  }
+.mainBtn:hover {
+  background-color: lightgreen;
+}
 
-  .displayModal {
-    font-size: 2rem;
+.mainBtn:active {
+  background-color: blue;
+}
+
+.closeBtn:active {
+  background-color: red;
+}
+
+.displayModal {
+  font-size: 2rem;
 }
 
 .dropdown {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .dayOfWeek {
-    text-align: center;
-    width: 100%;
-    font-size: 5rem;
+  text-align: center;
+  width: 100%;
+  font-size: 2rem;
 }
+
 .recipe {
-    margin-top: 4rem;
-    text-align: center;
+  margin-top: 4rem;
+  text-align: center;
 }
 
 .modalBtn {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
+.modal-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+display: flex;
+align-items: center;
+justify-content: center;
+}
 
+.modal-content {
+display: flex;
 
+max-height: 90%;
+max-width: 40%;
+background-color: white;
+padding: 4rem;
+border-radius: 2rem;
+}
+
+@media only screen and (max-width: 650px) {
+.dropdown {
+  font-size: 0.5rem;
+}
+
+.dayOfWeek {
+  text-align: center;
+  font-size: 0.5rem;
+
+}
+.modalBtn {
+font-size: 0.5rem;
+}
+
+.modal-content {
+display: flex;
+
+max-height: 95%;
+max-width: 60%;
+background-color: white;
+padding: 1rem;
+border-radius: 2rem;
+}
+}
+
+@media only screen and (max-width: 1050px) {
+.dropdown {
+  font-size: 1.5rem;
+}
+
+.dayOfWeek {
+  text-align: center;
+  width: 100%;
+  font-size: 1rem;
+  max-height: 100%;
+  max-width: 100%;
+}
+.modalBtn {
+font-size: 1rem;
+}
+}
+
+@media only screen and (max-width: 492px) {
+.dropdown {
+  font-size: 1rem;
+}
+
+.modalBtn {
+font-size: 0.6rem;
+}
+.modal-content {
+display: flex;
+
+max-height: 95%;
+max-width: 60%;
+background-color: white;
+border-radius: 2rem;
+}
+
+}
 
 
 
