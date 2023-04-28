@@ -8,8 +8,6 @@ import MealTypeDropDown from  "./mealType";
 import Modal from 'react-modal';
 import './style.css'
 
-
-
 const RecipeModal = () => {
   const [selectedDay, setSelectedDay] = useState("");
   const [selectedMealType, setSelectedMealType] = useState("");

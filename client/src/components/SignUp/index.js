@@ -16,7 +16,9 @@ const SignupScreen = (props) => {
       variables: {
         email: formState.email,
         password: formState.password,
-        name: formState.name,
+        firstName: formState.firstName,
+        lastName: formState.lastName,
+        username: formState.username,
       },
     });
     const token = mutationResponse.data.addUser.token;
@@ -41,7 +43,7 @@ const SignupScreen = (props) => {
               <Form.Group>
                 <Form.Label>First Name</Form.Label>
                 <Form.Control
-                  name="firstName"
+                  name="First"
                   type="text"
                   id="firstName"
                   placeholder="Enter your first name"
@@ -52,10 +54,21 @@ const SignupScreen = (props) => {
               <Form.Group>
                 <Form.Label>Last Name</Form.Label>
                 <Form.Control
-                  name="lastName"
+                  name="Last"
                   type="text"
                   id="lastName"
                   placeholder="Enter your last name"
+                  onChange={handleChange}
+                />
+              </Form.Group>
+
+              <Form.Group>
+                <Form.Label>Username</Form.Label>
+                <Form.Control
+                  name="Username"
+                  type="text"
+                  id="Username"
+                  placeholder="Create a username"
                   onChange={handleChange}
                 />
               </Form.Group>
