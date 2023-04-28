@@ -8,15 +8,13 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
+import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage/Login';
 import AboutPage from './pages/AboutPage/AboutPage';
 import SignUp from './pages/SignUpPage/SignUp';
 import ProfilePage from './pages/ProfilePage';
 import Search from './pages/RecipePage/searchRecipe';
 import Selected from './pages/RecipePage/selectRecipe';
-
-
-// import Recipes from './pages/recipes'
 
 
 const httpLink = createHttpLink({
@@ -44,7 +42,9 @@ function App() {
       <Router>
         <div>
           <Routes>
-            <Route path="/" element={<ProfilePage />}>
+            <Route path="/" element={<HomePage />}>
+            </Route>
+            <Route path="/profile" element={<ProfilePage />}>
             </Route>
             <Route path="/login" element={<LoginPage />}>
             </Route>
@@ -56,23 +56,6 @@ function App() {
             </Route>
             <Route path="/recipe" element={<Selected />}>
             </Route>
-            {/* <Route path="/search" element={<SearchPage />}>
-            </Route> */}
-            {/* <Route path="/login" element={<Layout />}>
-          <Route index element={<Login />} />
-        </Route> */}
-            {/* <Route path="/profile" element={<Layout1 />}>
-          <Route index element={<Profile />} />
-        </Route>
-        <Route path="/recipes" element={<Layout1 />}>
-          <Route index element={<Recipes />} />
-        </Route>
-        <Route path="/myMealPlanCart" element={<Layout1 />}>
-          <Route index element={<MealPlans />} />
-        </Route>
-        <Route path="/aboutUs" element={<Layout2 />}>
-          <Route index element={<AboutUs />} />
-        </Route> */}
           </Routes>
         </div>
       </Router>

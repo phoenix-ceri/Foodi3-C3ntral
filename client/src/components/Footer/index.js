@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import "./index.scss"
 
 const Footer = () => {
   const location = useLocation();
@@ -17,7 +18,7 @@ const Footer = () => {
             &larr; Go Back
           </button>
         )}
-        <p className='.fs-6 text fw-bolder m-0'>
+        <p className='.fs-6 text fw-bolder m-0 white'>
           Made with{' '}
           <span
             className="emoji"
