@@ -1,0 +1,29 @@
+body{
+    background-color: #a69f8f;
+}
+
+@media only screen and (min-width: 768px) {
+    .side-navbar {
+        visibility: visible;
+    }
+    .topNavRecipe {
+        visibility: hidden;
+    }
+  }
+@media only screen and (max-width: 768px) {
+    .side-navbar {
+        visibility: hidden;
+    }
+    .topNavRecipe {
+        visibility: visible;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .side-navbar {
+        visibility: hidden;
+    }
+    .topNavRecipe {
+        visibility: visible;
+    }
+  }

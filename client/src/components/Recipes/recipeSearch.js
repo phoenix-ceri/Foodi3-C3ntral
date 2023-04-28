@@ -59,7 +59,7 @@ const Search = () => {
             })
             console.log(data)
             //addRecipe and save the ID that you get from {data} to the recipe and whatever other information it needs, needs to link to user/mealplan. 
-            // Combining recipedetails/recipe and adding the rating to the combined model. Just move the rating from the recipe model to the recipedetails model (could cut out an extra step)
+            // Combining recipedetails/recipe and adding the rating to the combined model. Just move the rating from the recipe model to the recipedetails model (could cut out an extra step) [DONE]
         } catch (err) {
             console.log(err);
         }
@@ -76,12 +76,14 @@ const Search = () => {
                         value={query}
                         onChange={handleInputChange}
                     />
-                    <button type="submit">Search</button>
+                    <div className='recipeSearchButtons'>
+                        <button className='recipeSumbitButton' type="submit">Search</button>
+                        <button className="random " onClick={handleRandomClick}>
+                            {element}
+                        </button>
+                    </div>
                 </div>
             </form>
-            <button className="random" onClick={handleRandomClick}>
-                {element}
-            </button>
             <div className="recipes">
                 {recipes.map((recipe) => (
                     <div key={recipe.id} className="recipe">
