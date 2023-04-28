@@ -67,7 +67,7 @@ export const ADD_USER = gql`
 
 export const ADD_RATING = gql`
   mutation addRaiting($stars: Int!) {
-    addRaiting($stars: Int!) {
+    addRaiting(stars: $stars) {
       creationDate
       _id
       commentBody
@@ -85,7 +85,7 @@ export const ADD_RATING = gql`
 
 export const REMOVE_RATING = gql`
 mutation RemoveRaiting($id: ID!) {
-    RemoveRating(ID!: $id) 
+    RemoveRating(ID: $id) 
 }
 `;
 
