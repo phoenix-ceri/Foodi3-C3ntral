@@ -7,7 +7,6 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import "./index.scss";
 
 const Login = (props) => {
-  // const navigate = useNavigate();
 
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN);
@@ -20,8 +19,6 @@ const Login = (props) => {
       });
       const token = mutationResponse.data.login.token;
       Auth.login(token);
-      // //this is where we redirect
-      // return navigate('/about');
     } catch (e) {
       console.log(e);
     }

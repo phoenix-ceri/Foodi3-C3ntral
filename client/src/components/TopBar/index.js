@@ -6,7 +6,7 @@ import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import './index.scss';
 import Auth from "../../utils/auth";
 
-function CustomNavbar() {
+function TopNav() {
 
   function showTopNav() {
     if (Auth.loggedIn()) {
@@ -92,4 +92,4 @@ function CustomNavbar() {
 //   );
 // }
 
-export default CustomNavbar;
+export default TopNav;

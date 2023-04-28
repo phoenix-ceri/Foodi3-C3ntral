@@ -122,6 +122,7 @@ db.once('open', async () => {
   await User.create({
     firstName: 'Kelley',
     lastName: 'Flinn',
+    username: 'Kflinn',
     email: 'kflinn@testmail.com',
     password: 'password12345',
     // mealPlans: [
@@ -137,6 +138,7 @@ db.once('open', async () => {
   await User.create({
     firstName: 'Alec',
     lastName: 'Riccio',
+    username: 'HandsomeHedgehog',
     email: 'ariccio@testmail.com',
     password: 'password12345'
   });
