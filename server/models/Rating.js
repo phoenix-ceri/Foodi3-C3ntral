@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
+const RecipeDetails = require('./RecipeDetails');
 const { Schema, Types } = mongoose;
 
 // Schema to create a rating subdocument
 const ratingSchema = new Schema(
   {
-    value: {
+    stars: {
       type: Number,
       required: true,
     },
@@ -14,9 +15,9 @@ const ratingSchema = new Schema(
       maxlength: 280,
       minlength: 1,
     },
-    username: {
-      type: String,
-      required: true,
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User"
     },
     createdAt: {
       type: String,
@@ -30,6 +31,5 @@ const ratingSchema = new Schema(
     id: false,
   }
 );
-const Rating = mongoose.model('Rating', ratingSchema);
 
-module.exports = Rating;
+module.exports = ratingSchema;
