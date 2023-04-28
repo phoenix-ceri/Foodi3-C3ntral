@@ -6,7 +6,7 @@ import { faBook, faHome, faCircleUser, faPeopleRoof, faUserPlus } from '@fortawe
 import '../../assets/fonts/fonts.css';
 import Auth from "../../utils/auth";
 
-function Sidebar() {
+function SideBar() {
 
     function showSideNav() {
         if (Auth.loggedIn()) {
