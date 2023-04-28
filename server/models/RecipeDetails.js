@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema, Types } = mongoose;
 
-const Recipe = require('./Recipe');
+const ratingSchema = require('../models/Rating');
 
 //Schema to create subdocument with recipe details from Spoonacular
 
@@ -41,25 +41,26 @@ const recipeDetailSchema = new Schema(
     },
     dishTypes: [
       {
-      //I'm not sure what type this should be because it is choices/an array?
-      type: String,
-    }
-  ],
+        //I'm not sure what type this should be because it is choices/an array?
+        type: String,
+      }
+    ],
     extendedIngredients: [
       {
-      //is this another subdocument? or just leave it as is and it will populate correctly? 
-      type: String,
-    }
-  ],
+        //is this another subdocument? or just leave it as is and it will populate correctly? 
+        type: String,
+      }
+    ],
     summary: {
       type: String,
     },
     winePairing: [
       {
-      //is this another subdocument? or just leave it as is and it will populate correctly? 
-      type: String,
-    }
-  ]
+        //is this another subdocument? or just leave it as is and it will populate correctly? 
+        type: String,
+      }
+    ],
+    reviews: [ratingSchema]
   },
   {
     toJSON: {

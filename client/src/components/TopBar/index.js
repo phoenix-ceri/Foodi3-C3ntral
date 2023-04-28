@@ -16,9 +16,9 @@ function TopNav() {
             <Navbar.Toggle className="my-toggler" aria-controls="navbar-nav" />
             <Navbar.Collapse className="my-collapse" id="navbar-nav">
               <Nav className="m-auto my-nav-links">
-                <Nav.Link className="my-nav-link " as={Link} to="/">Home</Nav.Link>
+                <Nav.Link className="my-nav-link " as={Link} to="/profile">Home</Nav.Link>
                 <Nav.Link className="my-nav-link " as={Link} to="/about">About</Nav.Link>
-                <Nav.Link className="my-nav-link " as={Link} to="/contact">Contact</Nav.Link>
+                <Nav.Link className="my-nav-link " as={Link} to="/search">Recipes</Nav.Link>
                 <NavDropdown className="my-dropdown" title={<FontAwesomeIcon icon={faSignOutAlt} />} id="nav-dropdown">
                   <NavDropdown.Item className="my-dropdown-item" as={Link} to="/logout">Logout</NavDropdown.Item>
                 </NavDropdown>
