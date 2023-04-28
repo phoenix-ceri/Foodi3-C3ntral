@@ -37,7 +37,7 @@ const Login = (props) => {
 
   return (
     <div className="login-screen">
-      <Container>
+      <Container className="login-container">
         <Row>
           <Col m={{ span: 6, offset: 3 }} className="login-screen-form">
             <h2 className="mb-3">Login</h2>
