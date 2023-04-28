@@ -66,7 +66,7 @@ const RecipeModal = () => {
             <Col>
                 <DaysOfWeekDropdown value={selectedDay} onChange={handleDayChange} />
             </Col>
-            <Col>
+            <Col className="mover">
               <MealTypeDropDown value={selectedMealType} onChange={handleMealTypeChange} />
             </Col>
             </Row>
