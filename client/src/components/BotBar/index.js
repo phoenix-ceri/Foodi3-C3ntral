@@ -12,7 +12,7 @@ function BottomNavbar() {
         <Nav className="mx-auto pb-5 mb-5">
           <Link to="/profile">Home</Link>
           <Link to="/about">About</Link>
-          <Link to="/search">Recipes</Link>
+          <Link to="/recipes">Recipes</Link>
           <a href="/" onClick={() => Auth.logout()}>
               Logout
           </a>
@@ -25,7 +25,7 @@ function BottomNavbar() {
       <Nav className="mx-auto pb-5 mb-5">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
-        <Link to="/search">Recipes</Link>
+        <Link to="/recipes">Recipes</Link>
         <Link to="/signup">SignUp</Link>
         <Link to="/login">Login</Link>
       </Nav>

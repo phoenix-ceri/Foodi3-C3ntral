@@ -22,7 +22,7 @@ function SideBar() {
                         {/* <Link exact='true' activeclassname='active' className='profile-link' to='/profile'>
                 <FontAwesomeIcon icon={faUser} color='#819863' />
             </Link> */}
-                        <Link exact='true' activeclassname='active' className='recipes-link' to='/search'>
+                        <Link exact='true' activeclassname='active' className='recipes-link' to='/recipes'>
 
                             <FontAwesomeIcon icon={faBook} size="xl" color='##000000' />
                         </Link>
@@ -48,7 +48,7 @@ function SideBar() {
                         {/* <Link exact='true' activeclassname='active' className='profile-link' to='/profile'>
                         <FontAwesomeIcon icon={faUser} color='#819863' />
                     </Link> */}
-                        <Link exact='true' activeclassname='active' className='recipes-link' to='/search'>
+                        <Link exact='true' activeclassname='active' className='recipes-link' to='/recipes'>
 
                             <FontAwesomeIcon icon={faBook} size="xl" color='#000000' />
                         </Link>
