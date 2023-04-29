@@ -33,6 +33,9 @@ export const QUERY_SINGLE_RECIPE = gql`
   }
 `;
 
+// query getUser {
+//   user {
+
 export const QUERY_USER = gql`
 query getUser($userId: ID!) {
   user(id: $userId) {

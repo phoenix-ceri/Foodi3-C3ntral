@@ -18,7 +18,7 @@ function TopNav() {
               <Nav className="m-auto my-nav-links">
                 <Nav.Link className="my-nav-link " as={Link} to="/profile">Home</Nav.Link>
                 <Nav.Link className="my-nav-link " as={Link} to="/about">About</Nav.Link>
-                <Nav.Link className="my-nav-link " as={Link} to="/search">Recipes</Nav.Link>
+                <Nav.Link className="my-nav-link " as={Link} to="/recipes">Recipes</Nav.Link>
                 <NavDropdown className="my-dropdown" title={<FontAwesomeIcon icon={faSignOutAlt} />} id="nav-dropdown">
                   <NavDropdown.Item className="my-dropdown-item" as={Link} to="/logout">Logout</NavDropdown.Item>
                 </NavDropdown>
@@ -39,7 +39,7 @@ function TopNav() {
               <Nav className="m-auto my-nav-links">
                 <Link className='my-nav-link' to="/">Home</Link>
                 <Link className='my-nav-link' to="/about">About</Link>
-                <Link className='my-nav-link' to="/search">Recipes</Link>
+                <Link className='my-nav-link' to="/recipes">Recipes</Link>
                 <Link className='my-nav-link' to="/signup">SignUp</Link>
                 <Link className='my-nav-link' to="/login">Login</Link>
               </Nav>
