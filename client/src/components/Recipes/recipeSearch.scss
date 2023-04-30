@@ -5,7 +5,11 @@
     text-align: center;
     padding: 2rem;
   }
-  
+  .recipeTitleList {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Raleway', sans-serif;
+  } 
   .search {
     display: flex;
     justify-content: center;
@@ -80,7 +84,11 @@
         font-size: 3rem;
         margin-bottom: 2rem;
       }
-      
+      @media only screen and (max-width: 1480px){
+        .recipeSearch-container {
+          margin-left: 160px;
+        }
+      }
       @media only screen and (max-width: 929px) {
         input[type='text'] {
           font-size: small;
@@ -109,6 +117,9 @@
         button[type='submit'] {
           width: 40%;
           font-size: small;
+        }
+        .recipeSearch-container {
+          margin-left: 0;
         }
       }
       

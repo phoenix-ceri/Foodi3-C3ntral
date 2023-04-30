@@ -58,7 +58,7 @@ function App() {
       </Switch> */}
             <Route exact path="/recipes" element={<Search />}>
             </Route>
-            <Route path="/recipes:id" element={<Selected />}>
+            <Route path="/recipes/:id" element={<Selected />}>
             </Route>
           </Routes>
         </div>

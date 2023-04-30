@@ -1,28 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
+import './index.scss'
 
-const REACT_APP_API_KEY = process.env.REACT_APP_SPOONACULAR_API_KEY;
+const apiKey = process.env.REACT_APP_SPOONACULAR_API_KEY;
 
 function RecipeCard(props) {
+  const { state } = useLocation();
   const { id } = useParams();
-  const [recipeCard, setRecipeCard] = useState({});
+  const [recipeCard, setRecipeCard] = useState(state);
   const { selectedRecipeId } = props;
+  console.log(recipeCard)
 
   useEffect(() => {
     const fetchRecipeCard = async () => {
-      const response = await axios.get(`https://api.spoonacular.com/recipes/${selectedRecipeId}/card?${REACT_APP_API_KEY}`);
+      const response = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`);
       setRecipeCard(response.data);
     };
-
-    fetchRecipeCard();
-  }, [id]);
-
+    if (!recipeCard) {
+      fetchRecipeCard();
+    }
+  }, [recipeCard]);
+  if (!recipeCard) {
+    return null;
+  }
   return (
-    <div>
-      <h1>{recipeCard.title}</h1>
+    <div className='container-RecipeCard' data-id={recipeCard.id}>
+      <div className='selectedRecipeTitle'>
+        <h1>{recipeCard.title}</h1>
+
+      </div>
       <img src={recipeCard.image} alt={recipeCard.title} />
-      <p>{recipeCard.description}</p>
+      <p>{recipeCard.instructions}</p>
     </div>
   );
 }
