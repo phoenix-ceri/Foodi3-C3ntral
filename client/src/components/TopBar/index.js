@@ -19,9 +19,9 @@ function TopNav() {
                 <Nav.Link className="my-nav-link " as={Link} to="/profile">Home</Nav.Link>
                 <Nav.Link className="my-nav-link " as={Link} to="/about">About</Nav.Link>
                 <Nav.Link className="my-nav-link " as={Link} to="/recipes">Recipes</Nav.Link>
-                <Nav.Link to="/" className='logout-link' onClick={() => Auth.logout()}>
+                <a href="/" className='logout-link' onClick={() => Auth.logout()}>
                   <FontAwesomeIcon icon={faRightFromBracket} size="lg" color='#000000' />
-                </Nav.Link>
+                </a>
                 {/* <Nav.Link className="my-nav-link" as={Link} to="/logout" title={<FontAwesomeIcon icon={faSignOutAlt} />}><a href="/" onClick={() => Auth.logout()}></a></Nav.Link> */}
               </Nav>
             </Navbar.Collapse>
