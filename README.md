@@ -12,12 +12,13 @@
   * [Licenses](#licenses)
 
   ## Description
-  [insert here]
+  A Meal Planner By Foodies For Foodies. We Used The Spoonacular Api To Create A Meal Planner For Any Diet. Users Can Comment On Recipes For Other Users To See, Save Meals To Their Plan And Create A Plan To Make Their Week Great!
   ## Deployment
-  [insert here]
+  This Application Is Deployed Using AWS Amplify. 
+  food3central.com
 
   ## Usage
-  [insert here]
+  Make An Account, Search Recipes By Name, Create A Meal Plan, Enjoy
 
   ## Images
   [insert here]
@@ -25,7 +26,7 @@
   ## Questions
   Have questions about this project?  
   GitHub: https://github.com/phoenix-ceri  
-  Email: phoenixceri@protonmail.com
+  Email: food3central@gmail.com
 
   ## Credits
   Eva Perez
@@ -37,8 +38,7 @@
   Phoenix-Ceri Powell
   <br/>
   Cody (The Best TA)
-  <br/>
-  [insert more here]
+
 
   ## Licenses
     This project is covered under the MIT license. To learn more about what this means, click the license button at the top.
