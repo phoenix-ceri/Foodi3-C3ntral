@@ -29,9 +29,9 @@ function SideBar() {
                         <Link exact='true' activeclassname='active' className='about-us-link' to='/about'>
                             <FontAwesomeIcon icon={faPeopleRoof} size="xl" color='#000000' />
                         </Link>
-                        <Link to="/" className='logout-link' onClick={() => Auth.logout()}>
+                        <a href="/" className='logout-link' onClick={() => Auth.logout()}>
                             <FontAwesomeIcon icon={faRightFromBracket} size="xl" color='#000000' />
-                        </Link>
+                        </a>
                     </nav>
                 </div>
             );
