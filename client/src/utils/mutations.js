@@ -35,8 +35,8 @@ export const ADD_RECIPE_DETAILS = gql`
 `;
 
 export const REMOVE_RECIPE = gql`
-mutation RemoveRecipe($recipeId: String!) {
-    RemoveRecipe(recipeID: $recipeId) {
+mutation removeRecipe($recipeId: String!) {
+    removeRecipe(recipeID: $recipeId) {
     _id
     name
     description
@@ -48,12 +48,14 @@ export const ADD_USER = gql`
   mutation addUser(
     $firstName: String!
     $lastName: String!
+    $username: String!
     $email: String!
     $password: String!
   ) {
     addUser(
       firstName: $firstName
       lastName: $lastName
+      username: $username
       email: $email
       password: $password
     ) {
@@ -84,7 +86,9 @@ export const ADD_RATING = gql`
 `;
 
 export const REMOVE_RATING = gql`
-mutation RemoveRating($id: ID!) {
-    RemoveRating(ID: $id) 
+mutation removeRating($_id: ID!) {
+    removeRating(_id: $_id) {
+      _id
+    }
 }
 `;

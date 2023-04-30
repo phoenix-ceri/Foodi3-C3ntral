@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/png/Logo-w-frame.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook, faHome, faCircleUser, faPeopleRoof, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { faBook, faHome, faCircleUser, faPeopleRoof, faUserPlus, faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 import '../../assets/fonts/fonts.css';
 import Auth from "../../utils/auth";
 import './side.scss';
@@ -16,7 +16,7 @@ function SideBar() {
                         <img src={Logo} alt='Logo with black frame' />
                     </Link>
                     <nav className="sidenav">
-                        <Link exact='true' activeclassname='active' to='/'>
+                        <Link exact='true' activeclassname='active' to='/profile'>
                             <FontAwesomeIcon icon={faHome} size="xl" color='#000000' />
                         </Link>
                         {/* <Link exact='true' activeclassname='active' className='profile-link' to='/profile'>
@@ -29,9 +29,9 @@ function SideBar() {
                         <Link exact='true' activeclassname='active' className='about-us-link' to='/about'>
                             <FontAwesomeIcon icon={faPeopleRoof} size="xl" color='#000000' />
                         </Link>
-                        <a href="/" onClick={() => Auth.logout()}>
-                            Logout
-                        </a>
+                        <Link to="/" className='logout-link' onClick={() => Auth.logout()}>
+                            <FontAwesomeIcon icon={faRightFromBracket} size="xl" color='#000000' />
+                        </Link>
                     </nav>
                 </div>
             );

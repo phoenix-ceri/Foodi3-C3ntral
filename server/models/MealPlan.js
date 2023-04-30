@@ -4,6 +4,10 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const mealPlanSchema = new Schema({
+  _id: {
+    type: String,
+    required: true
+  },
   creationDate: {
     type: Date,
     default: Date.now,

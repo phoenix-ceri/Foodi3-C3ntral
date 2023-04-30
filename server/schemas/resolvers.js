@@ -17,9 +17,8 @@ const resolvers = {
   },
 
   Mutation: {
-    addUser: async (parent, args) => {
-      console.log(parent, args);
-      const user = await User.create(args);
+    addUser: async (parent, { firstName, lastName, username, email, password }) => {
+      const user = await User.create({ username, firstName, lastName, email, password });
       const token = signToken(user);
       console.log(user, "you successfully signed up!")
       return { token, user };
@@ -80,6 +79,19 @@ const resolvers = {
       }
       return updatedUser;
     },
+
+    removeRating: async (parent, args, context) => {
+      const updatedRating = await User.findOneAndUpdate(
+        { _id: context.user._id },
+        { $pull: { savedReviews: { ratingId: args.ratingId } } },
+        { new: true }
+      );
+      if (!updatedRating) {
+        throw new AuthenticationError("Couldn't find user with this id!");
+      }
+      return updatedUser;
+    },
+
   },
 };
 

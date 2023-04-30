@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-export const QUERY_MEALPLANS = gql`
+export const QUERY_MEALPLAN = gql`
   query getMealPlan {
     mealPlan {
       _id
@@ -32,9 +32,6 @@ export const QUERY_SINGLE_RECIPE = gql`
     }
   }
 `;
-
-// query getUser {
-//   user {
 
 export const QUERY_USER = gql`
 query getUser($userId: ID!) {

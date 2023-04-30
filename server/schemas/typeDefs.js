@@ -61,6 +61,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addRecipeDetails(RecipeDetails: [ID]!,spoonId: Int!,title: String!,image: String,imageType: String!,servings: Int, readyInMinutes: Int, spoonacularSourceUrl: String, pricePerServing: Int, cheap: Boolean, dishTypes: String, extendedIngredients: String, summary: String, winePairing: String): RecipeDetails
     addRating(stars: Int!, commentBody: String!, username: String!): RecipeDetails
+    removeRating(_id: ID!):Rating
   }
 `;
 
