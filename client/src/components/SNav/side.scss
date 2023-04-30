@@ -35,7 +35,7 @@
 
     a {
         font-size: 22px;
-        color:#ffffff;
+        color:#000000;
         display: block;
         line-height: 51px;
         height: 51px;
@@ -116,6 +116,12 @@
     a.login-link {
         &:after {
             content: 'LOG IN';
+            color: black;
+        }
+    }
+    a.logout-link {
+        &:after {
+            content: 'LOG OUT';
             color: black;
         }
     }

@@ -7,7 +7,7 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import "./index.scss"
 
 const SignupScreen = (props) => {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ email: '', password: '', username: '', firstName: '', lastName: '' });
   const [addUser] = useMutation(ADD_USER);
 
   const handleFormSubmit = async (event) => {
@@ -43,7 +43,7 @@ const SignupScreen = (props) => {
             <Form.Group>
               <Form.Label>First Name</Form.Label>
               <Form.Control
-                name="First"
+                name="firstName"
                 type="text"
                 id="firstName"
                 placeholder="Enter your first name"
@@ -55,7 +55,7 @@ const SignupScreen = (props) => {
             <Form.Group>
               <Form.Label>Last Name</Form.Label>
               <Form.Control
-                name="Last"
+                name="lastName"
                 type="text"
                 id="lastName"
                 placeholder="Enter your last name"
@@ -67,9 +67,9 @@ const SignupScreen = (props) => {
             <Form.Group>
               <Form.Label>Username</Form.Label>
               <Form.Control
-                name="Username"
+                name="username"
                 type="text"
-                id="Username"
+                id="username"
                 placeholder="Create a username"
                 onChange={handleChange}
                 className="signupInput"

@@ -9,7 +9,7 @@ function AboutTeamPage() {
       title: 'Co-Lead & Backend',
       image: 'https://media.discordapp.net/attachments/1068322599186202717/1101598493828718664/eva-transformed.png?width=542&height=903',
       bio:
-        "Eva is a Guatemalan-Chinese Woman with a desire to learn, grow, and create using any and all of her skills ranging from leadership to full-stack web development, to cross-cultural communications. She owned her own Etsy business making custom jewelry and studied medicine, languages, and technology to make a conglomerate of widely-versed skill sets.",
+        "Eva is a Guatemalan-Chinese Woman with a desire to learn, grow, and create using any and all of her skills ranging from leadership to full-stack web development, to cross-cultural communications. She enjoys frontend and backend development mixing JavaScript and HTML as it is in React and building databases to save information and integrate 3rd party APIs! She owned her own Etsy business making custom jewelry and studied medicine, languages, and technology to make a conglomerate of widely-versed skill sets.",
     },
     {
       name: 'Jeff Zulma',
@@ -28,7 +28,7 @@ function AboutTeamPage() {
     {
       name: 'Phoenix-Ceri Powell',
       title: 'Front End Engineer',
-      image: 'https://media.discordapp.net/attachments/1068322599186202717/1101596810226712656/fifi-transformed.png?width=542&height=903',
+      image: 'https://media.discordapp.net/attachments/1068322599186202717/1101977409286328420/fifi-transformed.png?width=542&height=903',
       bio:
         'Phoenix is a highly motivated,resourceful, and organized Fullstack Developer. They are always looking for new things to learn and practice their skills on. They have experience with HTML5, CSS, Various CSS frameworks, Js, React, Python, MongoDB, SQL, and many others. They are always willing to work with others on engineering or coding projects. Outside of Programming Phoenix enjoys building robots, playing video games, and going on hikes to find and identify plants. ',
     },
@@ -41,7 +41,7 @@ function AboutTeamPage() {
         {teamMembers.map((member, index) => (
           <Col key={index}>
             <div className='aboutimg'>
-              <Image src={member.image} width='200px' height='120px' />
+              <Image src={member.image} width="200px" />
             </div>
             <div className='aboutcard'>
               <h3>{member.name}</h3>

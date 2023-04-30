@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 import './index.scss';
 import Auth from "../../utils/auth";
 
@@ -19,12 +19,10 @@ function TopNav() {
                 <Nav.Link className="my-nav-link " as={Link} to="/profile">Home</Nav.Link>
                 <Nav.Link className="my-nav-link " as={Link} to="/about">About</Nav.Link>
                 <Nav.Link className="my-nav-link " as={Link} to="/recipes">Recipes</Nav.Link>
-                <NavDropdown className="my-dropdown" title={<FontAwesomeIcon icon={faSignOutAlt} />} id="nav-dropdown">
-                  <NavDropdown.Item className="my-dropdown-item" as={Link} to="/logout">Logout</NavDropdown.Item>
-                </NavDropdown>
-                <a href="/" onClick={() => Auth.logout()}>
-                  Logout
-                </a>
+                <Nav.Link to="/" className='logout-link' onClick={() => Auth.logout()}>
+                  <FontAwesomeIcon icon={faRightFromBracket} size="lg" color='#000000' />
+                </Nav.Link>
+                {/* <Nav.Link className="my-nav-link" as={Link} to="/logout" title={<FontAwesomeIcon icon={faSignOutAlt} />}><a href="/" onClick={() => Auth.logout()}></a></Nav.Link> */}
               </Nav>
             </Navbar.Collapse>
           </Container>

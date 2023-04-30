@@ -5,6 +5,10 @@ const { Schema, Types } = mongoose;
 // Schema to create a rating subdocument
 const ratingSchema = new Schema(
   {
+    _id: {
+      type: String,
+      required: true
+    },
     stars: {
       type: Number,
       required: true,
