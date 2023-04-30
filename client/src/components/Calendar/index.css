@@ -1,3 +1,5 @@
+@import url('../../assets/fonts/fonts.css');
+
 .calendar-container {
     display: flex;
     flex-wrap: wrap;
@@ -6,6 +8,7 @@
   }
   
   .day-container {
+    font-family: 'Roboto Slab', serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,6 +20,7 @@
   }
   
   .meal-container {
+    font-family: 'Roboto Slab', serif;
     margin-top: 10px;
     cursor: pointer;
     width: 200px;

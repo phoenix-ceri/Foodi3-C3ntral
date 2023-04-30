@@ -31,7 +31,7 @@ function TopNav() {
     } else {
       return (
         <div>
-          <Navbar bg="light" expand="lg" sticky="top">
+          <Navbar bg="light" expand="lg" >
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="m-auto my-nav-links">
@@ -91,3 +91,6 @@ function TopNav() {
 // }
 
 export default TopNav;
+
+
+// sticky="top"
