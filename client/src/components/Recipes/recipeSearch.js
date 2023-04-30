@@ -3,7 +3,6 @@ import axios from 'axios';
 import "./recipeSearch.scss";
 import { useMutation } from '@apollo/client';
 import { ADD_RECIPE, ADD_RECIPE_DETAILS } from "../../utils/mutations";
-import RecipeButton from '../buttons/recipeBtn';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDice } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
@@ -63,7 +62,7 @@ const Search = () => {
             </form>
             <div className="recipes">
                 {recipes.map((recipe) => (
-                    <Link key={recipe.id} to={`/recipes/${recipe.id}`} state={recipe}>
+                    <Link className='recipeListCard' style={{ textDecoration: 'none' }} key={recipe.id} to={`/recipes/${recipe.id}`} state={recipe}>
                         <div className="recipe">
                             <img src={recipe.image} alt={recipe.title} />
                             <p className='recipeTitleList'>{recipe.title}</p>
@@ -74,7 +73,7 @@ const Search = () => {
                     </Link>
                 ))}
             </div>
-        </div>
+        </div >
     );
 };
 
