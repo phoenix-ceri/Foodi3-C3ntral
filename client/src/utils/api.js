@@ -1,7 +1,7 @@
-const REACT_APP_SPOONACULAR_API_KEY = process.env.REACT_APP_SPOONACULAR_API_KEY;
+const apiKey = process.env.REACT_APP_SPOONACULAR_API_KEY;
 
 export default function spoonacular(search) {
-    return fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${search}&apiKey=${REACT_APP_SPOONACULAR_API_KEY}`).then(response => {
+    return fetch(`https://api.spoonacular.com/recipes/complexSearch?&apiKey=${apiKey}query=${search}`).then(response => {
         return response.json()
     })
 }

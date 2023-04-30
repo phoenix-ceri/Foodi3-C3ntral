@@ -6,9 +6,10 @@ import { ADD_RECIPE, ADD_RECIPE_DETAILS } from "../../utils/mutations";
 import RecipeButton from '../buttons/recipeBtn';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDice } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 const apiKey = process.env.REACT_APP_SPOONACULAR_API_KEY;
 const element = <FontAwesomeIcon icon={faDice} size="2xl" style={{ color: "#ffffff", }} />
-
+console.log(process.env)
 const Search = () => {
     const [query, setQuery] = useState('');
     const [recipes, setRecipes] = useState([]);
@@ -62,13 +63,15 @@ const Search = () => {
             </form>
             <div className="recipes">
                 {recipes.map((recipe) => (
-                    <div key={recipe.id} className="recipe">
-                        <img src={recipe.image} alt={recipe.title} />
-                        <p>{recipe.title}</p>
-                        <div>
-                            <RecipeButton data-id={recipe.id} />
+                    <Link key={recipe.id} to={`/recipes/${recipe.id}`} state={recipe}>
+                        <div className="recipe">
+                            <img src={recipe.image} alt={recipe.title} />
+                            <p className='recipeTitleList'>{recipe.title}</p>
+                            {/* <div>
+                                <RecipeButton data-id={recipe.id} />
+                            </div> */}
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>

@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import DaysOfWeekDropdown from "./dayOfTheWeek";
-import MealTypeDropDown from  "./mealType";
+import MealTypeDropDown from "./mealType";
 import Modal from 'react-modal';
 import './style.css'
 
@@ -31,7 +31,7 @@ const RecipeModal = () => {
     setSelectedMealType(e.target.value);
   };
 
- const handleFormSubmit = (e) => {
+  const handleFormSubmit = (e) => {
     e.preventDefault();
     if (selectedDay && selectedMealType) {
       setSavedSelections([
@@ -51,36 +51,36 @@ const RecipeModal = () => {
         <p>He is super annoying but like they say you hate em to love them</p>
         <img src="https://www.dogbreedinfo.com/images26/SpencerPedigreePitbullTerrierLinesRazorEdgeWatchDogShadesBlueKennel2YearsOld.jpg" alt="Cane Corso"/>
       </div> */}
-      <br/>
+      <br />
 
       <div className="text-center">
-       <Button  variant="success" className="displayModal btn btn-primary" onClick={openModal}>Add Recipe to Calendar</Button>
-       </div>
-       <div className="Modal">
-        <Modal className={'modal-overlay'} isOpen={modalIsOpen}onRequestClose={closeModal} 
-        contentLabel="Example Modal" >
+        <Button variant="success" className="displayModal btn btn-primary" onClick={openModal}>Add Recipe to Calendar</Button>
+      </div>
+      <div className="Modal">
+        <Modal className={'modal-overlay'} isOpen={modalIsOpen} onRequestClose={closeModal}
+          contentLabel="Example Modal" >
           <Form className="modal-content" onSubmit={handleFormSubmit}>
             <Row>
-            <Col>
+              <Col>
                 <DaysOfWeekDropdown value={selectedDay} onChange={handleDayChange} />
-            </Col>
-            <Col className="mover">
-              <MealTypeDropDown value={selectedMealType} onChange={handleMealTypeChange} />
-            </Col>
+              </Col>
+              <Col className="mover">
+                <MealTypeDropDown value={selectedMealType} onChange={handleMealTypeChange} />
+              </Col>
             </Row>
-            <br/>
-            <br/>
+            <br />
+            <br />
             <div className="text-center">
-            <Button className="modalBtn" type="submit" variant="primary">Complete Plan</Button>
+              <Button className="modalBtn" type="submit" variant="primary">Add to Plan</Button>
             </div>
-            <br/>
+            <br />
             <div className="text-center">
-            <Button className="modalBtn" onClick={closeModal} variant="danger">Close</Button>
+              <Button className="modalBtn" onClick={closeModal} variant="danger">Close</Button>
             </div>
           </Form>
         </Modal>
-        </div>
-   </div>
+      </div>
+    </div>
   );
 };
 
