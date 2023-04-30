@@ -4,12 +4,16 @@
     margin: 0 auto;
     text-align: center;
     padding: 2rem;
+    text-decoration: none;
   }
   .recipeTitleList {
     text-decoration: none;
     color: #000000;
     font-family: 'Raleway', sans-serif;
   } 
+  .recipeListCard {
+    text-decoration: none;
+  }
   .search {
     display: flex;
     justify-content: center;
@@ -73,13 +77,13 @@
     margin-bottom: 1rem;
   }
   
-  .recipe h2 {
+  .recipe p {
     font-size: 2rem;
-        margin-bottom: 2rem;
-        font-family: 'Roboto Slab', serif;
-      }
+    margin-bottom: 2rem;
+    font-family: 'Roboto Slab', serif;
+    text-decoration: none;
+    }
 
-    
     h1 {
         font-size: 3rem;
         margin-bottom: 2rem;
