@@ -5,6 +5,7 @@ const { signToken } = require('../utils/auth');
 
 //this is where you talk to your database through your models (you need the resolvers and the type defs to match by name and be 1:1) It also has to be in the same category (AKA query to query, mutation to mutation)
 
+//our resolver is slightly different than the user resolver for the boilerplate. the boilerplate uses (parent, args, context) and an if/else. Do we need to do that to make this work? I mean the boilerplate has other things in it that we don't use (orders, etc), but the basic logic is still slightly different and I'm wondering if we modify the logic to be like that then ? I don't want to mess with it because I'm not entirely sure the reasoning Michael gave you for doing it the way we are, so here we are lol 
 const resolvers = {
   Query: {
     getUser:
@@ -16,9 +17,10 @@ const resolvers = {
   },
 
   Mutation: {
-    addUser: async (parent, args) => {
-      const user = await User.create(args);
+    addUser: async (parent, { firstName, lastName, username, email, password }) => {
+      const user = await User.create({ username, firstName, lastName, email, password });
       const token = signToken(user);
+      console.log(user, "you successfully signed up!")
       return { token, user };
     },
     login: async (parent, { email, password }) => {
@@ -27,13 +29,13 @@ const resolvers = {
       if (!user) {
         throw new AuthenticationError('No user found with this email address');
       }
-
+      //console.log(email, "this is working!")
       const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
         throw new AuthenticationError('Incorrect credentials');
       }
-
+      //console.log(password, "this is also working!")
       const token = signToken(user);
 
       return { token, user };
@@ -77,6 +79,19 @@ const resolvers = {
       }
       return updatedUser;
     },
+
+    removeRating: async (parent, args, context) => {
+      const updatedRating = await User.findOneAndUpdate(
+        { _id: context.user._id },
+        { $pull: { savedReviews: { ratingId: args.ratingId } } },
+        { new: true }
+      );
+      if (!updatedRating) {
+        throw new AuthenticationError("Couldn't find user with this id!");
+      }
+      return updatedUser;
+    },
+
   },
 };
 

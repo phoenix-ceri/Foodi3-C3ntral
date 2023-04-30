@@ -22,26 +22,20 @@
     font-size: 1.1rem;
     font-weight: 500;
     margin-right: 20px;
-    color: #333;
+    color: #000000;
     transition: color 0.3s ease-in-out;
      text-decoration: none;
   }
   
   .my-nav-link:hover {
-    color: #333;
+    color: #000000;
     font-family: 'Raleway', sans-serif;
   }
   
   .my-dropdown {
     border: none;
   }
-  
-  .my-dropdown-item {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #333;
-    transition: color 0.3s ease-in-out;
-  }
+
 .remove {
   border:none;
 }

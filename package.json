@@ -24,6 +24,7 @@
     "dotenv": "^16.0.3",
     "env-cmd": "^10.1.0",
     "react-bootstrap": "^2.7.4",
-    "react-modal": "^3.16.1"
+    "react-modal": "^3.16.1",
+    "react-router-dom": "^6.11.0"
   }
 }

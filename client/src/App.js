@@ -52,9 +52,13 @@ function App() {
             </Route>
             <Route path="/signup" element={<SignUp />}>
             </Route>
-            <Route path="/search" element={<Search />}>
+            {/* <Switch>
+        <Route exact path="/recipes" element={<Search />} />
+        <Route path="/recipes/:id" element={<Selected />} />
+      </Switch> */}
+            <Route exact path="/recipes" element={<Search />}>
             </Route>
-            <Route path="/recipe" element={<Selected />}>
+            <Route path="/recipes:id" element={<Selected />}>
             </Route>
           </Routes>
         </div>

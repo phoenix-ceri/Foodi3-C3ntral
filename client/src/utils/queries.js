@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-export const QUERY_MEALPLANS = gql`
+export const QUERY_MEALPLAN = gql`
   query getMealPlan {
     mealPlan {
       _id
