@@ -5,9 +5,9 @@ import './mealType.css'
 const MealTypeDropDown = ({ value, onChange }) => {
   return (
     <div className="meal-type-dropdown">
-      <h2 className="dayOfWeek">Meal Type</h2>
+      <h2 className="dayOfWeek">Meal</h2>
       <Form.Select className="dropdown" value={value} onChange={onChange} aria-label="Default select example">
-        <option>Meal Type</option>
+        <option>Meal</option>
         <option value="Breakfast">Breakfast</option>
         <option value="Lunch">Lunch</option>
         <option value="Dinner">Dinner</option>
