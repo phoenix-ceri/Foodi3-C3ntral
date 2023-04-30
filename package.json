@@ -9,7 +9,7 @@
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
     "build": "cd client && npm run build",
-    "build:prod": "env-cmd -f .env.production react-scripts build"
+    "build:prod": "env-cmd -f /client.env.production react-scripts build"
   },
   "keywords": [],
   "author": "",
