@@ -46,7 +46,7 @@ const SignupScreen = (props) => {
                 name="firstName"
                 type="text"
                 id="firstName"
-                placeholder="Enter your first name"
+                placeholder="(Gordon)"
                 onChange={handleChange}
                 className="signupInput"
               />
@@ -58,7 +58,7 @@ const SignupScreen = (props) => {
                 name="lastName"
                 type="text"
                 id="lastName"
-                placeholder="Enter your last name"
+                placeholder="(Ramsay)"
                 onChange={handleChange}
                 className="signupInput"
               />
@@ -70,7 +70,7 @@ const SignupScreen = (props) => {
                 name="username"
                 type="text"
                 id="username"
-                placeholder="Create a username"
+                placeholder="(LambSauce)"
                 onChange={handleChange}
                 className="signupInput"
               />
@@ -82,7 +82,7 @@ const SignupScreen = (props) => {
                 name="email"
                 type="email"
                 id="email"
-                placeholder="Enter email"
+                placeholder="(123@123.com)"
                 onChange={handleChange}
                 className="signupInput"
               />
@@ -94,7 +94,7 @@ const SignupScreen = (props) => {
                 name="password"
                 type="password"
                 id="pwd"
-                placeholder="Password"
+                placeholder="(ItsRAW)"
                 onChange={handleChange}
                 className="signupInput"
               />

@@ -1,8 +1,10 @@
+@import '../../assets/fonts/fonts.css';
 .login-screen{
     display: flex;
     justify-content: center;
 }
 .login-container{
+    font-family: 'Roboto Slab', serif;
     width: auto;
     background-color: white;
     border: 4px solid black;
