@@ -8,14 +8,15 @@ const apiKey = process.env.REACT_APP_SPOONACULAR_API_KEY;
 function RecipeCard(props) {
   const { state } = useLocation();
   const { id } = useParams();
-  const [recipeCard, setRecipeCard] = useState(state);
-  const { selectedRecipeId } = props;
-  console.log(recipeCard)
+  const { recipeCard, setRecipeCard } = props;
+  setRecipeCard(state);
+
 
   useEffect(() => {
     const fetchRecipeCard = async () => {
       const response = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`);
       setRecipeCard(response.data);
+      console.log(recipeCard)
     };
     if (!recipeCard) {
       fetchRecipeCard();

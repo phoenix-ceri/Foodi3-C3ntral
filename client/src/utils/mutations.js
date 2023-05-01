@@ -13,18 +13,25 @@ export const LOGIN = gql`
 
 //can make the below two resolvers all in one
 //should be adding recipe to meal plan
-export const ADD_RECIPE = gql`
-  mutation addRecipe($recipes: [ID]!) {
-    addRecipe(recipes: $recipes) {
-    creationDate
-      recipes {
-        _id
-        name
-        description
-      }
-    }
+// export const ADD_RECIPE = gql`
+//   mutation addRecipe($recipes: [ID]!) {
+//     addRecipe(recipes: $recipes) {
+//     creationDate
+//       recipes {
+//         _id
+//         name
+//         description
+//       }
+//     }
+//   }
+// `;
+
+export const ADD_TO_MEALPLAN = gql`
+mutation addToMealPlan($spoonId: Int!, $slot: Int!, $position: String!) {
+  addToMealPlan(spoonId: $spoonId, slot: $slot, position: $position) {
+    _id
   }
-`;
+}`
 
 export const ADD_RECIPE_DETAILS = gql`
   mutation addRecipeDetails($recipeDetails: [ID]!, $spoonId: Int!, $title: String!, $image: String, $imageType: String!, $servings: Int, $readyInMinutes: Int, $spoonacularSourceUrl: String, $pricePerServing: Int, $cheap: Boolean, $dishTypes: String, $extendedIngredients: String, $summary: String, $winePairing: String) {

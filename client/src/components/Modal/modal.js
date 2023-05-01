@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useMutation } from "@apollo/client";
+import { ADD_TO_MEALPLAN } from "../../utils/mutations";
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
@@ -8,12 +10,12 @@ import MealTypeDropDown from "./mealType";
 import Modal from 'react-modal';
 import './style.css'
 
-const RecipeModal = () => {
+const RecipeModal = ({ recipeCard, setRecipeCard }) => {
   const [selectedDay, setSelectedDay] = useState("");
   const [selectedMealType, setSelectedMealType] = useState("");
   const [savedSelections, setSavedSelections] = useState([]);
   const [modalIsOpen, setIsOpen] = useState(false);
-
+  const [addToMealPlan, { error }] = useMutation(ADD_TO_MEALPLAN)
   function openModal() {
     setIsOpen(true);
   }
@@ -21,6 +23,7 @@ const RecipeModal = () => {
   function closeModal() {
     setIsOpen(false);
   }
+
 
   const handleDayChange = (e) => {
     setSelectedDay(e.target.value);
@@ -38,6 +41,12 @@ const RecipeModal = () => {
         ...savedSelections,
         { day: selectedDay, mealType: selectedMealType },
       ]);
+      console.log(recipeCard)
+      //do mutation here
+      console.log({ spoonId: recipeCard.id, slot: selectedDay, position: selectedMealType })
+      const { data } = addToMealPlan({
+        variables: { spoonId: recipeCard.id, slot: parseInt(selectedDay), position: selectedMealType }
+      })
       setSelectedDay("");
       setSelectedMealType("");
     }

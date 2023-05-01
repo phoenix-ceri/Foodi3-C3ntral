@@ -4,10 +4,6 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const mealPlanSchema = new Schema({
-  _id: {
-    type: String,
-    required: true
-  },
   creationDate: {
     type: Date,
     default: Date.now,
@@ -18,7 +14,7 @@ const mealPlanSchema = new Schema({
     required: true,
   },
   position: {
-    type: Number,
+    type: String,
     required: true,
   },
   recipes: [
