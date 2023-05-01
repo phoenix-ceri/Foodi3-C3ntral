@@ -3,6 +3,7 @@ import { Form, Col } from 'react-bootstrap';
 import './index.css';
 import { useQuery } from '@apollo/client';
 import { QUERY_ME } from '../../utils/queries';
+// import { ADD_RECIPE_DETAILS } from "../../utils/mutations";
 
 const REACT_APP_SPOONACULAR_API_KEY = process.env.REACT_APP_SPOONACULAR_API_KEY;
 
@@ -13,6 +14,8 @@ const CalendarForm = () => {
   const userData = data?.me || {};
   console.log(userData); 
   const [selectedRecipe, setSelectedRecipe] = useState(null);
+  // const [ addRecipeDetails, { error }] = useMutation(ADD_RECIPE_DETAILS);
+  
 
   const handleRecipeSelect = async (day, meal) => {
     const searchResponse = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${REACT_APP_SPOONACULAR_API_KEY}&query=${day} ${meal}`);
