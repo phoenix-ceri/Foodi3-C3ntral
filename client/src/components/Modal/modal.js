@@ -16,7 +16,6 @@ const RecipeModal = ({ recipeCard, setRecipeCard }) => {
   const [savedSelections, setSavedSelections] = useState([]);
   const [modalIsOpen, setIsOpen] = useState(false);
   const [addToMealPlan, { error }] = useMutation(ADD_TO_MEALPLAN)
-  const [addToMealPlan, { error }] = useMutation(ADD_TO_MEALPLAN);
   //import and create add_recipe mutation (similar to add_to_mealplan)
   function openModal() {
     setIsOpen(true);
@@ -44,13 +43,8 @@ const RecipeModal = ({ recipeCard, setRecipeCard }) => {
         ...savedSelections,
         { day: selectedDay, mealType: selectedMealType },
       ]);
-      console.log(recipeCard)
       //do mutation here
-      console.log({ spoonId: recipeCard.id, slot: selectedDay, position: selectedMealType })
-      const { data } = addToMealPlan({
-        variables: { spoonId: recipeCard.id, slot: parseInt(selectedDay), position: selectedMealType }
-      })
-      console.log(recipeCard)
+          console.log(recipeCard)
       //do add_recipe mutation and replace the recipe with the recipe._id that we're getting
       console.log({ recipe: recipeCard.id, slot: selectedDay, position: selectedMealType })
       const { data } = addToMealPlan({
