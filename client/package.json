@@ -1,7 +1,7 @@
 {
   "name": "foodi3c3ntral",
   "version": "0.1.0",
-  "proxy": "http://localhost:3001/",
+  "proxy": "http://localhost:3001/graphql",
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.7.12",
