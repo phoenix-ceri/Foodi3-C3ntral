@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const RecipeDetails = require('./RecipeDetails');
+const dateFormat = require('../utils/dateFormat');
 const { Schema, Types } = mongoose;
 
 // Schema to create a rating subdocument
@@ -19,7 +20,7 @@ const ratingSchema = new Schema(
       maxlength: 280,
       minlength: 1,
     },
-    user: {
+    commentAuthor: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User"
     },
