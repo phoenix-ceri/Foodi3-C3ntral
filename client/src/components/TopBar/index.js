@@ -16,7 +16,7 @@ function TopNav() {
             <Navbar.Toggle className="my-toggler" aria-controls="navbar-nav" />
             <Navbar.Collapse className="my-collapse" id="navbar-nav">
               <Nav className="m-auto my-nav-links">
-                <Nav.Link className="my-nav-link " as={Link} to="/">Home</Nav.Link>
+                <Nav.Link className="my-nav-link " as={Link} to="/profile">Home</Nav.Link>
                 <Nav.Link className="my-nav-link " as={Link} to="/about">About</Nav.Link>
                 <Nav.Link className="my-nav-link " as={Link} to="/recipes">Recipes</Nav.Link>
                 <a href="/" className='logout-link' onClick={() => Auth.logout()}>

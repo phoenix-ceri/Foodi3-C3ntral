@@ -27,8 +27,13 @@ export const LOGIN = gql`
 // `;
 
 export const ADD_TO_MEALPLAN = gql`
+<<<<<<< HEAD
+mutation addToMealPlan($recipe: Int!, $slot: Int!, $position: String!) {
+  addToMealPlan(recipe: $recipe, slot: $slot, position: $position) {
+=======
 mutation addToMealPlan($spoonId: Int!, $slot: Int!, $position: String!) {
   addToMealPlan(spoonId: $spoonId, slot: $slot, position: $position) {
+>>>>>>> main
     _id
   }
 }`

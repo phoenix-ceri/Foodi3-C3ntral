@@ -13,6 +13,18 @@ const resolvers = {
         const userSimple = await User.findById(args._id).
           populate({ path: "mealPlans", model: "MealPlan", populate: { path: "recipes", model: "RecipeDetails" } })
         return userSimple;
+      },
+      me:
+      async (_, args, context) => {
+        try{
+        const userSimple = await User.findById(context.user._id)
+          // populate({ path: "mealPlans", model: "MealPlan", populate: { path: "recipes", model: "RecipeDetails" } })
+          console.log(userSimple);
+        return userSimple;
+        } catch(err) {
+          console.log(err);
+          throw new AuthenticationError(err.message)
+        }
       }
   },
 

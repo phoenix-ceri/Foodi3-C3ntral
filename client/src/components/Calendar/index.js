@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import { Form, Col } from 'react-bootstrap';
 import './index.css';
+import { useQuery } from '@apollo/client';
+import { QUERY_ME } from '../../utils/queries';
 
 const REACT_APP_SPOONACULAR_API_KEY = process.env.REACT_APP_SPOONACULAR_API_KEY;
 
 const CalendarForm = () => {
   const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
   const meals = ['Breakfast', 'Lunch', 'Dinner'];
-
+  const { data, loading } = useQuery(QUERY_ME);
+  const userData = data?.me || {};
+  console.log(userData); 
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
   const handleRecipeSelect = async (day, meal) => {
@@ -17,7 +21,7 @@ const CalendarForm = () => {
     const recipeDetails = await recipeDetailsResponse.json();
     setSelectedRecipe({ day, meal, recipe: recipeDetails });
   };
-
+//userData.mealPlans (find where to put it based off the position and weekday or put .find where it needs to go)
   return (
     <>
       <Form>

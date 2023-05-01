@@ -17,13 +17,14 @@ const mealPlanSchema = new Schema({
     type: String,
     required: true,
   },
-  recipes: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'RecipeDetails'
+  recipe:  {
+    type: Number,
+    required: true,
+      // type: Schema.Types.ObjectId,
+      // ref: 'RecipeDetails'
     }
     //may want to change this to 'recipe' singular in order to have one recipe per slot/position instead of multiple - something to consider
-  ]
+
 });
 
 const MealPlan = mongoose.model('MealPlan', mealPlanSchema);
