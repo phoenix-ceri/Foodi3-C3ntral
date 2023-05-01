@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
-import StarRatingComponent from 'react-star-rating-component';
+
 
 
 const ReviewList = ({ reviews = [] }) => {
