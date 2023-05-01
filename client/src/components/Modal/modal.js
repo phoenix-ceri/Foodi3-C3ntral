@@ -15,7 +15,7 @@ const RecipeModal = ({ recipeCard, setRecipeCard }) => {
   const [selectedMealType, setSelectedMealType] = useState("");
   const [savedSelections, setSavedSelections] = useState([]);
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [addToMealPlan, { error }] = useMutation(ADD_TO_MEALPLAN)
+  const [addToMealPlan, { error }] = useMutation(ADD_TO_MEALPLAN);
   //import and create add_recipe mutation (similar to add_to_mealplan)
   function openModal() {
     setIsOpen(true);
@@ -24,7 +24,6 @@ const RecipeModal = ({ recipeCard, setRecipeCard }) => {
   function closeModal() {
     setIsOpen(false);
   }
-
 
 
   const handleDayChange = (e) => {
@@ -43,8 +42,7 @@ const RecipeModal = ({ recipeCard, setRecipeCard }) => {
         ...savedSelections,
         { day: selectedDay, mealType: selectedMealType },
       ]);
-      //do mutation here
-          console.log(recipeCard)
+      console.log(recipeCard)
       //do add_recipe mutation and replace the recipe with the recipe._id that we're getting
       console.log({ recipe: recipeCard.id, slot: selectedDay, position: selectedMealType })
       const { data } = addToMealPlan({
@@ -57,12 +55,6 @@ const RecipeModal = ({ recipeCard, setRecipeCard }) => {
 
   return (
     <div >
-      {/* <div className="recipe">
-        <h2>Hi My name is Jeff </h2>
-        <p>I want a Cane Corso's but I currently own a Pit Bull that is about to turn 2 years old.</p>
-        <p>He is super annoying but like they say you hate em to love them</p>
-        <img src="https://www.dogbreedinfo.com/images26/SpencerPedigreePitbullTerrierLinesRazorEdgeWatchDogShadesBlueKennel2YearsOld.jpg" alt="Cane Corso"/>
-      </div> */}
       <br />
 
       <div className="text-center">
