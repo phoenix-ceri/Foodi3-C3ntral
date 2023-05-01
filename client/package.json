@@ -1,7 +1,7 @@
 {
   "name": "foodi3c3ntral",
   "version": "0.1.0",
-  "proxy": "http://localhost:3001/",
+  "proxy": "http://localhost:3001/graphql",
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.7.12",
@@ -12,6 +12,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
+    "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
     "date-fns": "^2.29.3",
     "dotenv": "^16.0.3",
@@ -31,7 +32,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build --output-path=public",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

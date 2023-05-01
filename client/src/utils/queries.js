@@ -28,7 +28,6 @@ export const QUERY_SINGLE_RECIPE = gql`
       _id
       name
       description
-      }
     }
   }
 `;
@@ -81,3 +80,19 @@ query getUser($userId: ID!) {
 }
 `;
 
+export const QUERY_ME = gql`
+  query me {
+    me {
+      _id
+      username
+      email
+      mealPlans {
+        slot
+        position
+        recipe
+      }
+    }
+  }
+`;
+
+//if using new mutation, can use a .populate in the resolver, update query_me to be recipe {things that you want, instead of just recipe}

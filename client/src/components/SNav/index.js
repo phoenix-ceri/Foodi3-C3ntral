@@ -16,7 +16,7 @@ function SideBar() {
                         <img src={Logo} alt='Logo with black frame' />
                     </Link>
                     <nav className="sidenav">
-                        <Link exact='true' activeclassname='active' to='/'>
+                        <Link exact='true' activeclassname='active' to='/profile'>
                             <FontAwesomeIcon icon={faHome} size="xl" color='#000000' />
                         </Link>
                         {/* <Link exact='true' activeclassname='active' className='profile-link' to='/profile'>

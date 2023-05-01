@@ -1,28 +1,28 @@
-// import { useMutation } from "@apollo/client";
-// import React, { useState } from "react";
-// import { Card, Button, Form } from "react-bootstrap";
-// import { FaStar } from "react-icons/fa";
-// import { ADD_RATING } from "../../utils/mutations";
-// import Auth from '../../utils/auth';
+// // import { useMutation } from "@apollo/client";
+// // import React, { useState } from "react";
+// // import { Card, Button, Form } from "react-bootstrap";
+// // import { FaStar } from "react-icons/fa";
+// // import { ADD_RATING } from "../../utils/mutations";
+// // import Auth from '../../utils/auth';
 
-// function AddReview({ recipeDetailsId }) {
-//   const [rating, setRating] = useState(0);
-//   const [characterCount, setCharacterCount] = useState(0);
-//   const [commentBody, setCommentBody] = useState("");
+// // function AddReview({ recipeDetailsId }) {
+// //   const [rating, setRating] = useState(0);
+// //   const [characterCount, setCharacterCount] = useState(0);
+// //   const [commentBody, setCommentBody] = useState("");
   
-//   const [addRating, { error }] = useMutation(ADD_RATING);
+// //   const [addRating, { error }] = useMutation(ADD_RATING);
 
-//   const handleFormSubmit = async (event) => {
-//     event.preventDefault();
+// //   const handleFormSubmit = async (event) => {
+// //     event.preventDefault();
 
-//     try {
-//         const { data } = await addRating({
-//             variables: {
-//                 recipeDetailsId,
-//                 commentBody,
-//                 commentAuthor: Auth.getProfile().data.username,
-//             },
-//         });
+// //     try {
+// //         const { data } = await addRating({
+// //             variables: {
+// //                 recipeDetailsId,
+// //                 commentBody,
+// //                 commentAuthor: Auth.getProfile().data.username,
+// //             },
+// //         });
 
 //         setRating(0);
 //         setCommentBody('');

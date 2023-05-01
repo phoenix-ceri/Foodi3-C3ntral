@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import RecipeModal from '../../components/Modal/modal';
 import Auth from "../../utils/auth";
@@ -9,14 +9,14 @@ import './index.scss'
 
 
 function SelectedRecipe() {
-
+  const [recipeCard, setRecipeCard] = useState({});
   return (
     <div>
-      <RecipeCard />
+      <RecipeCard recipeCard={recipeCard} setRecipeCard={setRecipeCard} />
       {Auth.loggedIn() ? (
         <div>
           {/* <ReviewList /> */}
-          <RecipeModal />
+          <RecipeModal recipeCard={recipeCard} setRecipeCard={setRecipeCard} />
           {/* <AddReview /> */}
         </div>
       ) : (
@@ -26,7 +26,7 @@ function SelectedRecipe() {
                 </>
       )}
     </div>
-    
+
   );
 }
 
