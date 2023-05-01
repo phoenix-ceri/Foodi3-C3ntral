@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
-
-=======
 // import React from 'react';
 // import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 // import StarRatingComponent from 'react-star-rating-component';
->>>>>>> 96011a27d3bd632d251ba39f1f4e475d19494fbd
 
 
 // const ReviewList = ({ reviews = [] }) => {
