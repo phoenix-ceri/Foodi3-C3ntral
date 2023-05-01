@@ -54,6 +54,18 @@ const resolvers = {
     },
     addToMealPlan: async (parent, args, context) => {
       try {
+        let recipe = RecipeDetails.findOne({ spoonId: args.recipe.id });
+        const newRecipeDetails = JSON.parse(args.recipe);
+        const cleanRecipeDetails = {
+          spoonId: newRecipeDetails.id,
+          title: newRecipeDetails.title,
+          image: newRecipeDetails.image,
+          imageType: newRecipeDetails.servings,
+        }
+        console.log(cleanRecipeDetails);
+        // if (!recipe) {
+        //   recipe = recipe.create
+        // }
         const updatedUser = await User.findOneAndUpdate(
           { _id: context.user._id },
           { $addToSet: { mealPlans: args } },
@@ -61,7 +73,7 @@ const resolvers = {
         );
         return updatedUser;
       } catch (err) {
-        console.log(err);
+        // console.log(err);
         //tells the front end there is an error
         throw new AuthenticationError('You need to be logged in!');
       }

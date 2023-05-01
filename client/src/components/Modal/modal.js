@@ -46,7 +46,7 @@ const RecipeModal = ({ recipeCard, setRecipeCard }) => {
       //do add_recipe mutation and replace the recipe with the recipe._id that we're getting
       console.log({ recipe: recipeCard.id, slot: selectedDay, position: selectedMealType })
       const { data } = addToMealPlan({
-        variables: { recipe: recipeCard.id, slot: parseInt(selectedDay), position: selectedMealType }
+        variables: { recipe: JSON.stringify(recipeCard), slot: parseInt(selectedDay), position: selectedMealType }
       })
       setSelectedDay("");
       setSelectedMealType("");

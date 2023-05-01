@@ -18,10 +18,10 @@ const mealPlanSchema = new Schema({
     required: true,
   },
   recipe:  {
-    type: Number,
-    required: true,
-      // type: Schema.Types.ObjectId,
-      // ref: 'RecipeDetails'
+    // type: Number,
+    // required: true,
+      type: Schema.Types.ObjectId,
+      ref: 'RecipeDetails'
     }
     //may want to change this to 'recipe' singular in order to have one recipe per slot/position instead of multiple - something to consider
 
