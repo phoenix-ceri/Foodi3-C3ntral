@@ -32,7 +32,7 @@ const typeDefs = gql`
     creationDate: String
     slot: Int!
     position: Int!
-    recipes: [RecipeDetails]
+    recipe: Int!
   }
 
   type User {
@@ -42,7 +42,7 @@ const typeDefs = gql`
     username: String!
     email: String!
     mealPlans: [MealPlan]
-    recipes: [RecipeDetails]
+    recipe: Int!
   }
 
   type Auth {
