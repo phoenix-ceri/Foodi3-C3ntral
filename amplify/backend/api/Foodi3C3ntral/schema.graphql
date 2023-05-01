@@ -1,0 +1,46 @@
+type Auth @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  token: ID
+}
+
+type Rating {
+  id: ID!
+  stars: Int!
+  commentBody: String!
+}
+
+type RecipeDetails {
+  id: ID!
+  spoonID: String
+  title: String
+  image: String
+  imageType: String
+  servings: Int
+  readyInMinutes: Int
+  spoonacularSourceUrl: String
+  pricePerServing: Float
+  cheap: Boolean
+  dishTypes: String
+  extendedIngredients: String
+  summary: String
+  winePairing: String
+  rating: Rating
+}
+
+type MealPlan {
+  id: ID!
+  creationDate: String
+  slot: Int!
+  position: Int!
+  recipes: RecipeDetails
+}
+
+type User @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  username: String!
+  email: String
+  mealPlan: MealPlan
+  Auth: Auth @hasOne
+}
