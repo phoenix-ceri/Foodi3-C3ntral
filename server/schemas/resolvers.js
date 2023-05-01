@@ -79,7 +79,24 @@ const resolvers = {
       }
       return updatedUser;
     },
-
+    addRating: async (parent, { recipeId, commentBody, stars }, context) => {
+      //should this be context.recipe? I think user is right? 
+      if (context.user) {
+        return RecipeDetails.findOneAndUpdate(
+          {_id: recipeId },
+          {
+            $addToSet: {
+              reviews: { stars, commentBody, commentAuthor: context.user.username },
+            },
+          },
+          {
+            new: true,
+            runValidators: true,
+          }
+        );
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
     removeRating: async (parent, args, context) => {
       const updatedRating = await User.findOneAndUpdate(
         { _id: context.user._id },
