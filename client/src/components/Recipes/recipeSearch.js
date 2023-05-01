@@ -8,7 +8,7 @@ import { faDice } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 const apiKey = process.env.REACT_APP_SPOONACULAR_API_KEY;
 const element = <FontAwesomeIcon icon={faDice} size="2xl" style={{ color: "#ffffff", }} />
-console.log(process.env)
+
 const Search = () => {
     const [query, setQuery] = useState('');
     const [recipes, setRecipes] = useState([]);
