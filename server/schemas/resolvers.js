@@ -41,11 +41,10 @@ const resolvers = {
       return { token, user };
     },
     addToMealPlan: async (parent, args, context) => {
-      console.log(context, "THIS IS THE CONTEXT.USER CONSOLE LOG", args)
       try {
         const updatedUser = await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { savedRecipes: args } },
+          { $addToSet: { mealPlans: args } },
           { new: true, runValidators: true }
         );
         return updatedUser;
@@ -83,7 +82,7 @@ const resolvers = {
       //should this be context.recipe? I think user is right? 
       if (context.user) {
         return RecipeDetails.findOneAndUpdate(
-          {_id: recipeId },
+          { _id: recipeId },
           {
             $addToSet: {
               reviews: { stars, commentBody, commentAuthor: context.user.username },

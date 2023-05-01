@@ -57,7 +57,7 @@ const typeDefs = gql`
   type Mutation {
     addUser(firstName: String!, lastName: String!, username:String!, email: String!, password: String!): Auth
     removeRecipes(RecipeDetails: [ID]!): MealPlan
-    addToMealPlan(spoonId: Int!, slot: Int!, position: Int!): MealPlan
+    addToMealPlan(spoonId: Int!, slot: Int!, position: String!): MealPlan
     login(email: String!, password: String!): Auth
     addRecipeDetails(RecipeDetails: [ID]!,spoonId: Int!,title: String!,image: String,imageType: String!,servings: Int, readyInMinutes: Int, spoonacularSourceUrl: String, pricePerServing: Int, cheap: Boolean, dishTypes: String, extendedIngredients: String, summary: String, winePairing: String): RecipeDetails
     addRating(stars: Int!, commentBody: String!, username: String!): RecipeDetails
