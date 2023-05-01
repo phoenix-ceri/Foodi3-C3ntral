@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const { Schema, Types } = mongoose;
-
+const dateFormat = require('../utils/dateFormat');
 const ratingSchema = require('../models/Rating');
 
 //Schema to create subdocument with recipe details from Spoonacular
@@ -60,7 +60,29 @@ const recipeDetailSchema = new Schema(
         type: String,
       }
     ],
-    reviews: [ratingSchema]
+    reviews: [
+      {
+        stars: {
+          type: Number,
+          required: true,
+        },
+        commentBody: {
+          type: String,
+          required: true,
+          maxlength: 280,
+          minlength: 1,
+        },
+        commentAuthor: {
+          type: String,
+          required: true,
+        },
+        createdAt: {
+          type: Date,
+          default: Date.now,
+          get: (timestamp) => dateFormat(timestamp),
+        }
+      }
+    ]
   },
   {
     toJSON: {

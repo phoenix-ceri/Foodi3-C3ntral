@@ -30,6 +30,10 @@ export const ADD_RECIPE_DETAILS = gql`
   mutation addRecipeDetails($recipeDetails: [ID]!, $spoonId: Int!, $title: String!, $image: String, $imageType: String!, $servings: Int, $readyInMinutes: Int, $spoonacularSourceUrl: String, $pricePerServing: Int, $cheap: Boolean, $dishTypes: String, $extendedIngredients: String, $summary: String, $winePairing: String) {
     addRecipeDetails(recipes: $recipes) {
       _id
+      reviews {
+        _id
+        commentBody
+      }
     }
   }
 `;
@@ -68,18 +72,13 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_RATING = gql`
-  mutation addRating($stars: Int!) {
-    addRating(stars: $stars) {
-      creationDate
+  mutation addRating($recipeId: ID!, $commentBody: String!, $stars: Int!) {
+    addRating(recipeId: $recipeId, commentBody: $commentBody, stars: $stars) {
       _id
-      commentBody
-      user {
-        _id
-        name
-      }
-      recipe {
-        _id
-        name
+      reviews {
+        stars
+        commentBody
+        createdAt
     }
   }
 }

@@ -4,10 +4,10 @@ import Form from 'react-bootstrap/Form';
 const DaysOfWeekDropdown = ({ value, onChange }) => {
   return (
     <div className="drop-container">
-      <h2 className="day-of-week">Day of the Week</h2>
+      <h2 className="day-of-week">Day</h2>
 
       <Form.Select className="dropdown" value={value} onChange={onChange} aria-label="Default select example">
-        <option>Day of the Week</option>
+        <option>Day</option>
         <option value="1">Monday</option>
         <option value="2">Tuesday</option>
         <option value="3">Wednesday</option>
