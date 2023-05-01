@@ -3,6 +3,7 @@ const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
 const { authMiddleware } = require('./utils/auth');
 const checkDatabase = require('./utils/checkDatabase');
+import { ApolloServerPluginDrainHttpServer } from "apollo-server-core";
 
 
 
@@ -16,6 +17,7 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   context: authMiddleware,
+  plugins: [ApolloServerPluginDrainHttpServer({ httpServer })]
 });
 
 app.use(express.urlencoded({ extended: false }));
