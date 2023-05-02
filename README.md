@@ -16,7 +16,7 @@
   A Meal Planner By Foodies For Foodies. We Used The Spoonacular Api To Create A Meal Planner For Any Diet. Users Can Comment On Recipes For Other Users To See, Save Meals To Their Plan And Create A Plan To Make Their Week Great!
   ## Deployment
   This Application Is Deployed Using AWS Amplify. 
-  food3central.com
+https://foodi3-c3ntral.vercel.app
 
   ## Usage
   Make An Account, Search Recipes By Name, Create A Meal Plan, Enjoy
